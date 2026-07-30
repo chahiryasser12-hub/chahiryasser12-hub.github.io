@@ -1,3 +1,17 @@
+# Fynzo robots.txt
 User-agent: *
 Allow: /
+
+# Explicitly welcome AI crawlers (2026 — needed for AI Overview / ChatGPT / Perplexity citations)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+
 Sitemap: https://fynzo.me/sitemap.xml

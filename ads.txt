@@ -1,0 +1,4 @@
+# Fynzo ads.txt — required by Google AdSense.
+# AFTER you are approved, AdSense gives you a line like the one below.
+# Replace pub-0000000000000000 with YOUR real publisher ID, then commit this file to the repo root.
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
