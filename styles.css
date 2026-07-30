@@ -144,3 +144,73 @@ footer{background:var(--navy);color:#fff;padding:56px 0 30px;margin-top:40px}
 [dir="rtl"] .calc-search .si{left:auto;right:20px}[dir="rtl"] .calc-search input{padding:16px 52px 16px 20px}[dir="rtl"] .calc-search .clear{right:auto;left:16px}
 [dir="rtl"] .crumb{text-align:right}[dir="rtl"] .doc ul,[dir="rtl"] .prose ul,[dir="rtl"] .article ul{margin-left:0;margin-right:22px}
 @media print{header,footer,.ad,.calc-actions,.related,.crumb{display:none!important}.calc-wrap{box-shadow:none;border:1px solid #ccc}}
+/* =========================================================
+   FYNZO — Mobile + CLS fixes
+   👉 HOW TO USE:
+   1. In GitHub, open styles.css → click the ✏️ (Edit) pencil.
+   2. Scroll to the very BOTTOM of the file.
+   3. Paste EVERYTHING below this comment block.
+   4. Commit changes. Site updates in ~1 minute.
+   ========================================================= */
+
+/* ---- FIX 1: CLS (stop layout jumping) ---- */
+/* reserve space for the nav tools that JS injects, so the navbar doesn't shift */
+.nav-links{min-height:40px}
+.nav-tools{min-width:148px;justify-content:flex-end}
+/* reserve space for images so text doesn't jump while they load */
+.hero-img{aspect-ratio:640/520}
+.hero-img img{width:100%;height:100%;object-fit:contain}
+.article-hero{aspect-ratio:1200/500;background:#eef2f7;object-fit:cover}
+.post-thumb{background:#eef2f7}
+.featured-art{min-height:200px}
+
+/* ---- FIX 2: Mobile layout (phones) ---- */
+@media(max-width:600px){
+  nav{padding:11px 15px}
+  .brand{font-size:19px;gap:8px}
+  .brand svg{height:30px}
+  .nav-tools{min-width:auto;gap:6px}
+  .icon-btn{width:34px;height:34px}
+  .icon-btn svg{width:17px;height:17px}
+  .lang-select{padding:6px 7px;font-size:12px}
+  .nav-search.open input{width:110px}
+
+  .hero{padding:34px 0 22px}
+  .hero-grid{gap:26px}
+  .hero h1{font-size:30px;letter-spacing:-1px;line-height:1.12}
+  .hero p{font-size:16px;margin:14px 0 22px}
+  .trust{gap:20px;margin-top:24px}
+  .trust div b{font-size:20px}
+
+  .sec{padding:38px 0}
+  .sec-head{margin-bottom:26px}
+  .sec-head h2{font-size:26px}
+
+  .calc-search input{padding:14px 18px 14px 46px;font-size:15px}
+
+  .tools-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .tool{padding:16px}
+  .tool .ic{width:44px;height:44px;margin-bottom:12px}
+  .tool h3{font-size:15px}
+  .tool p{font-size:12.5px}
+
+  .calc-wrap{padding:20px;gap:20px}
+  .result .rbig{font-size:34px}
+  .calc-actions{gap:6px}
+  .act-btn{min-width:0;flex:1;padding:10px 8px;font-size:12px}
+
+  .article{padding:0 16px}
+  .article-head h1{font-size:28px}
+  .article-lead{font-size:17px}
+  .article p,.article li{font-size:16px}
+
+  .doc{padding:24px 20px}
+  .foot{grid-template-columns:1fr 1fr;gap:24px}
+}
+
+/* extra-small phones */
+@media(max-width:380px){
+  .tools-grid{grid-template-columns:1fr}
+  .hero h1{font-size:27px}
+}
+
