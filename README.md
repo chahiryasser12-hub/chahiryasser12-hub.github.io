@@ -15,7 +15,7 @@ Pure HTML/CSS/JS. SEO-ready, AdSense-ready, dark mode, EN/FR/AR, search everywhe
 1. Upload everything to `public_html`. 2. Point domain via DNS. 3. Enable free SSL.
 
 ## Personalise before AdSense
-- Replace `G-XXXXXXXXXX` (GA4) in all HTML.
+- Replace `G-D7NJ4T2ZK4` (GA4) in all HTML.
 - Replace `https://fynzo.me/` in sitemap.xml + robots.txt.
 - Replace `hello@fynzo.me` with your email + set Formspree endpoint in contact.html.
 

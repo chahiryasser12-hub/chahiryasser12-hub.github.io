@@ -2,8 +2,8 @@
 
 ## GA4
 1. analytics.google.com → Start measuring → property "Fynzo", timezone Morocco.
-2. Web stream → your domain → copy Measurement ID (G-XXXXXXXXXX).
-3. Find-and-replace G-XXXXXXXXXX in ALL .html with your ID → re-upload.
+2. Web stream → your domain → copy Measurement ID (G-D7NJ4T2ZK4).
+3. Find-and-replace G-D7NJ4T2ZK4 in ALL .html with your ID → re-upload.
 4. Reports → Realtime should show you.
 
 ## Search Console
