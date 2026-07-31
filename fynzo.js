@@ -1,29 +1,97 @@
-/* Fynzo shared UI — dark mode (light default), nav search, languages EN/FR/AR */
-(function(){"use strict";
-if(localStorage.getItem('fynzo-theme')==='dark') document.documentElement.setAttribute('data-theme','dark');
-function toggleTheme(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('fynzo-theme','light');}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('fynzo-theme','dark');}}
-var T={fr:{"Calculators":"Calculatrices","Blog":"Blog","About":"À propos","Contact":"Contact","Start free":"Commencer","Tools":"Outils","Company":"Entreprise","Legal":"Légal","Finance":"Finance","Health":"Santé","All tools":"Tous les outils","Mortgage":"Hypothèque","Loan":"Prêt","Compound interest":"Intérêts composés","Privacy":"Confidentialité","Terms":"Conditions","Disclaimer":"Avertissement","Free, fast, private calculators for the money and health decisions that matter.":"Des calculatrices gratuites, rapides et privées.","Pick a calculator":"Choisissez une calculatrice","Why Fynzo?":"Pourquoi Fynzo ?"},
-ar:{"Calculators":"الحاسبات","Blog":"المدونة","About":"من نحن","Contact":"اتصل بنا","Start free":"ابدأ مجانًا","Tools":"الأدوات","Company":"الشركة","Legal":"قانوني","Finance":"المال","Health":"الصحة","All tools":"كل الأدوات","Mortgage":"القرض العقاري","Loan":"القرض","Compound interest":"الفائدة المركبة","Privacy":"الخصوصية","Terms":"الشروط","Disclaimer":"إخلاء المسؤولية","Free, fast, private calculators for the money and health decisions that matter.":"حاسبات مجانية وسريعة وخاصة.","Pick a calculator":"اختر حاسبة","Why Fynzo?":"لماذا Fynzo؟"}};
-var SEL='.nav-links a, .foot h4, .foot a, .foot-brand p, .sec-head h2, .filter, .prose h2';
-function applyLang(lang){var d=T[lang];
-document.querySelectorAll(SEL).forEach(function(el){if(!el.hasAttribute('data-en'))el.setAttribute('data-en',el.textContent.trim());var en=el.getAttribute('data-en');if(lang==='en'){el.textContent=en;}else if(d&&d[en]){el.textContent=d[en];}});
-var h1=document.querySelector('.hero h1');if(h1){if(lang==='fr')h1.innerHTML='Toutes vos <span>calculatrices</span> d\'argent et de santé — en un seul endroit.';else if(lang==='ar')h1.innerHTML='كل <span>حاسبات</span> المال والصحة — في مكان واحد.';else h1.innerHTML='All your money &amp; health <span>calculators</span> — in one place.';}
-var cs=document.getElementById('calcSearch');if(cs){cs.placeholder=lang==='fr'?'Rechercher — ex. « hypothèque », « IMC »...':lang==='ar'?'ابحث — جرّب «قرض»...':'Search a calculator — try "mortgage", "BMI", "loan"...';}
-document.documentElement.setAttribute('lang',lang);if(lang==='ar')document.documentElement.setAttribute('dir','rtl');else document.documentElement.removeAttribute('dir');localStorage.setItem('fynzo-lang',lang);}
-function currentLang(){var first=location.pathname.split('/').filter(Boolean)[0];return first==='fr'||first==='ar'?first:'en';}
-var MIRRORED=['index.html','about.html','age-calculator.html','blog.html','bmi-calculator.html','body-fat-calculator.html','calorie-calculator.html','compound-interest-calculator.html','contact.html','date-difference-calculator.html','disclaimer.html','discount-calculator.html','fuel-cost-calculator.html','hourly-to-salary-calculator.html','ideal-weight-calculator.html','income-tax-calculator.html','length-converter.html','loan-calculator.html','mortgage-calculator.html','password-generator.html','percentage-calculator.html','privacy.html','roi-calculator.html','sales-tax-calculator.html','savings-goal-calculator.html','temperature-converter.html','terms.html','tip-calculator.html','water-intake-calculator.html'];
-function pageSlug(){var parts=location.pathname.split('/').filter(Boolean);var last=parts.length?parts[parts.length-1]:'index.html';return last.indexOf('.')===-1?'index.html':last;}
-function languageUrl(to){var slug=pageSlug();if(MIRRORED.indexOf(slug)===-1)slug=slug.indexOf('blog-')===0?'blog.html':'index.html';var base=to==='en'?'/':'/'+to+'/';return base+(slug==='index.html'?'':slug)+location.search+location.hash;}
-function switchLanguage(to){localStorage.setItem('fynzo-lang',to);window.location.assign(languageUrl(to));}
-function build(){var nl=document.querySelector('.nav-links');if(!nl)return;var w=document.createElement('div');w.className='nav-tools';
-w.innerHTML='<div class="nav-search" id="navSearch"><input type="text" placeholder="Search…" aria-label="Search"><button class="go" aria-label="Go"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12 H19 M13 6 L19 12 L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div><button class="icon-btn" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20 L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><button class="icon-btn" id="themeToggle" aria-label="Theme"><svg class="sun" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none"><path d="M20 14.5 A8 8 0 1 1 9.5 4 A6.5 6.5 0 0 0 20 14.5 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button>';
-nl.appendChild(w);
-var box=w.querySelector('#navSearch'),inp=box.querySelector('input');
-w.querySelector('#searchToggle').addEventListener('click',function(){box.classList.toggle('open');if(box.classList.contains('open'))inp.focus();});
-function go(){var q=inp.value.trim();if(!q)return;if(document.getElementById('calcSearch')){var cs=document.getElementById('calcSearch');cs.value=q;cs.dispatchEvent(new Event('input'));document.getElementById('tools').scrollIntoView({behavior:'smooth'});}else{var lang=currentLang(),home=lang==='en'?'/':'/'+lang+'/';window.location=home+'?q='+encodeURIComponent(q)+'#tools';}}
-inp.addEventListener('keydown',function(e){if(e.key==='Enter')go();});box.querySelector('.go').addEventListener('click',go);
-w.querySelector('#themeToggle').addEventListener('click',toggleTheme);
-localStorage.setItem('fynzo-lang','en');applyLang('en');}
-function qp(){var cs=document.getElementById('calcSearch');if(!cs)return;var q=new URLSearchParams(location.search).get('q');if(q){cs.value=q;cs.dispatchEvent(new Event('input'));var t=document.getElementById('tools');if(t)setTimeout(function(){t.scrollIntoView({behavior:'smooth'});},200);}}
-document.addEventListener('DOMContentLoaded',function(){build();qp();});
+/* Fynzo shared UI: English navigation, search and theme controls. */
+(function () {
+  "use strict";
+
+  var root = document.documentElement;
+  if (localStorage.getItem("fynzo-theme") === "dark") {
+    root.setAttribute("data-theme", "dark");
+  }
+
+  function toggleTheme() {
+    var dark = root.getAttribute("data-theme") === "dark";
+    if (dark) {
+      root.removeAttribute("data-theme");
+      localStorage.setItem("fynzo-theme", "light");
+    } else {
+      root.setAttribute("data-theme", "dark");
+      localStorage.setItem("fynzo-theme", "dark");
+    }
+  }
+
+  function homeUrl() {
+    return "/";
+  }
+
+  function buildNavigationTools() {
+    var navLinks = document.querySelector(".nav-links");
+    if (!navLinks || navLinks.querySelector(".nav-tools")) return;
+
+    var tools = document.createElement("div");
+    tools.className = "nav-tools";
+    tools.innerHTML =
+      '<div class="nav-search" id="navSearch">' +
+      '<input type="search" placeholder="Search calculators" aria-label="Search calculators">' +
+      '<button class="go" type="button" aria-label="Run search">' +
+      '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12 H19 M13 6 L19 12 L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      '</button></div>' +
+      '<button class="icon-btn" id="searchToggle" type="button" aria-label="Open search" aria-expanded="false">' +
+      '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20 L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' +
+      '</button>' +
+      '<button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">' +
+      '<svg class="sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' +
+      '<svg class="moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.5 A8 8 0 1 1 9.5 4 A6.5 6.5 0 0 0 20 14.5 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>' +
+      '</button>';
+    navLinks.appendChild(tools);
+
+    var searchBox = tools.querySelector("#navSearch");
+    var searchInput = searchBox.querySelector("input");
+    var searchToggle = tools.querySelector("#searchToggle");
+
+    function toggleSearch() {
+      var open = searchBox.classList.toggle("open");
+      searchToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      searchToggle.setAttribute("aria-label", open ? "Close search" : "Open search");
+      if (open) searchInput.focus();
+    }
+
+    function runSearch() {
+      var query = searchInput.value.trim();
+      if (!query) return;
+      var pageSearch = document.getElementById("calcSearch");
+      var toolsSection = document.getElementById("tools");
+      if (pageSearch && toolsSection) {
+        pageSearch.value = query;
+        pageSearch.dispatchEvent(new Event("input", { bubbles: true }));
+        toolsSection.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.location.assign(homeUrl() + "?q=" + encodeURIComponent(query) + "#tools");
+      }
+    }
+
+    searchToggle.addEventListener("click", toggleSearch);
+    searchInput.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") runSearch();
+      if (event.key === "Escape" && searchBox.classList.contains("open")) toggleSearch();
+    });
+    searchBox.querySelector(".go").addEventListener("click", runSearch);
+    tools.querySelector("#themeToggle").addEventListener("click", toggleTheme);
+  }
+
+  function applySearchFromUrl() {
+    var pageSearch = document.getElementById("calcSearch");
+    var toolsSection = document.getElementById("tools");
+    if (!pageSearch || !toolsSection) return;
+    var query = new URLSearchParams(window.location.search).get("q");
+    if (!query) return;
+    pageSearch.value = query;
+    pageSearch.dispatchEvent(new Event("input", { bubbles: true }));
+    window.setTimeout(function () {
+      toolsSection.scrollIntoView({ behavior: "smooth" });
+    }, 150);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    buildNavigationTools();
+    applySearchFromUrl();
+  });
 })();
