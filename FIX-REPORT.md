@@ -29,3 +29,13 @@ These do not break the website, but can be removed from production deployment:
 - Replace `hello@fynzo.me` with the real contact email.
 - Replace `formspree.io/f/YOUR_FORM_ID` with the real Formspree endpoint.
 - Add a valid `ads.txt` only after AdSense approval.
+
+## Full-site language switching
+- The language selector now redirects to the matching page in `/fr/`, `/ar/`, or the English root.
+- The selected language is determined from the URL, so every page stays consistent.
+- Search now opens the homepage in the currently active language.
+- If a translated version of an English-only blog article does not exist, switching language opens that language's blog index instead of a broken URL.
+
+## Complete-language cleanup
+- Cleaned the remaining English labels from all French and Arabic HTML pages, including footer navigation, advertising labels, legal labels, units, and the educational disclaimer.
+- The selector redirects to complete standalone translated pages. It does not merely translate a few navigation words.
