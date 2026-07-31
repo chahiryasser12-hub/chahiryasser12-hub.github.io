@@ -1,17 +1,43 @@
-# Fynzo robots.txt
+# Fynzo robots.txt — optimized 2026 (Google + AI answer engines)
+
 User-agent: *
 Allow: /
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.svg$
+# Don't waste crawl budget on tracking params
+Disallow: /*?*utm_
+Disallow: /*?*ref=
 
-# Explicitly welcome AI crawlers (2026 — needed for AI Overview / ChatGPT / Perplexity citations)
+# --- Explicitly welcome AI answer engines (needed for AI Overview / ChatGPT / Perplexity / Claude citations) ---
 User-agent: GPTBot
 Allow: /
+
 User-agent: OAI-SearchBot
 Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
+
 User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://fynzo.me/sitemap.xml
