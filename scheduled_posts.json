@@ -1,0 +1,1424 @@
+[
+  {
+    "slug": "compare-mortgage-rates",
+    "title": "How to Compare Two Mortgage Rates Without Missing the Real Cost",
+    "category": "Mortgages",
+    "calculator": "mortgage-calculator.html",
+    "image": "og-mortgage.png",
+    "lead": "A lower mortgage rate can reduce a payment, but a fair comparison keeps the loan amount, term and fee assumptions consistent.",
+    "concept": "Compare principal and interest first, then place taxes, insurance, lender fees and closing cash beside the result. The advertised rate is only one part of the offer.",
+    "example": "Compare a $300,000 loan over 30 years at 6.0% and 5.5%. The lower rate reduces the scheduled payment and total interest, but a fee charged to obtain that rate can change the break-even point.",
+    "table": [
+      [
+        "Loan amount",
+        "Keep identical"
+      ],
+      [
+        "Loan term",
+        "Keep identical"
+      ],
+      [
+        "Interest rate",
+        "Compare directly"
+      ],
+      [
+        "Fees and points",
+        "Review separately"
+      ]
+    ],
+    "mistakes": [
+      "Comparing loans with different terms",
+      "Looking only at the monthly payment",
+      "Ignoring points and lender fees",
+      "Treating an estimate as a formal offer"
+    ],
+    "steps": [
+      "Collect written Loan Estimates",
+      "Enter the same principal and term",
+      "Compare payment and total interest",
+      "Add fees and closing cash",
+      "Choose only after reviewing the full offer"
+    ],
+    "sources": [
+      [
+        "https://www.consumerfinance.gov/owning-a-home/",
+        "CFPB homebuying tools and resources"
+      ]
+    ],
+    "keywords": [
+      "mortgage",
+      "rate",
+      "home",
+      "interest",
+      "comparison"
+    ],
+    "publish_date": "2026-08-07",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "down-payment-and-closing-costs",
+    "title": "Down Payment vs Closing Costs: How Much Cash Do You Really Need?",
+    "category": "Mortgages",
+    "calculator": "mortgage-calculator.html",
+    "image": "og-mortgage.png",
+    "lead": "The down payment is not the only cash needed to buy a home. Closing costs, moving expenses and an emergency cushion belong in the plan too.",
+    "concept": "The down payment reduces the amount borrowed. Closing costs cover services and charges connected with the transaction. Keeping cash after closing can help absorb repairs and setup costs.",
+    "example": "For a $300,000 target home, separate the planned down payment from the closing-cost estimate. Do not use the entire savings balance for the down payment if that leaves no room for closing or emergencies.",
+    "table": [
+      [
+        "Down payment",
+        "Reduces the loan"
+      ],
+      [
+        "Closing costs",
+        "Transaction expenses"
+      ],
+      [
+        "Moving and setup",
+        "Immediate non-loan cash"
+      ],
+      [
+        "Emergency cushion",
+        "Cash kept after closing"
+      ]
+    ],
+    "mistakes": [
+      "Treating all savings as available",
+      "Forgetting inspection and moving costs",
+      "Assuming every lender charges the same fees",
+      "Using a percentage without checking official documents"
+    ],
+    "steps": [
+      "Set a total cash limit",
+      "Reserve an emergency cushion",
+      "Estimate closing costs separately",
+      "Test several down payments",
+      "Compare official documents before committing"
+    ],
+    "sources": [
+      [
+        "https://www.consumerfinance.gov/owning-a-home/prepare/determine-your-down-payment/",
+        "CFPB guidance on down payments and closing cash"
+      ]
+    ],
+    "keywords": [
+      "down payment",
+      "closing costs",
+      "mortgage",
+      "cash"
+    ],
+    "publish_date": "2026-08-14",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "fixed-vs-variable-rate",
+    "title": "Fixed vs Variable Interest Rates: A Practical Comparison",
+    "category": "Loans",
+    "calculator": "loan-calculator.html",
+    "image": "og-loan.png",
+    "lead": "Fixed and variable rates trade certainty against exposure to future rate changes. The right comparison starts with the payment you can sustain.",
+    "concept": "A fixed rate keeps the contractual rate stable for the stated period. A variable rate can change according to its index and terms, so a low starting payment is not the only scenario to test.",
+    "example": "Run the same loan at the current variable rate, then repeat it at one and two percentage points higher. Compare those payments with the fixed-rate option and your available monthly margin.",
+    "table": [
+      [
+        "Fixed rate",
+        "More predictable"
+      ],
+      [
+        "Variable rate",
+        "Can rise or fall"
+      ],
+      [
+        "Rate cap",
+        "Limits may apply"
+      ],
+      [
+        "Reset frequency",
+        "Controls when changes happen"
+      ]
+    ],
+    "mistakes": [
+      "Choosing from the starting rate alone",
+      "Ignoring caps and reset rules",
+      "Assuming rates must move in one direction",
+      "Using the maximum affordable payment"
+    ],
+    "steps": [
+      "Read the rate-change formula",
+      "Calculate the starting payment",
+      "Stress-test higher rates",
+      "Check fees and penalties",
+      "Keep room in the budget"
+    ],
+    "sources": [
+      [
+        "https://www.consumerfinance.gov/owning-a-home/",
+        "CFPB homebuying tools and resources"
+      ]
+    ],
+    "keywords": [
+      "fixed rate",
+      "variable rate",
+      "loan",
+      "payment"
+    ],
+    "publish_date": "2026-08-21",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "loan-term-36-vs-60-months",
+    "title": "36 vs 60 Months: How Loan Term Changes Payment and Interest",
+    "category": "Loans",
+    "calculator": "loan-calculator.html",
+    "image": "og-loan.png",
+    "lead": "A longer term usually lowers the monthly payment but can increase total interest and keep the debt longer.",
+    "concept": "Loan comparisons should show both payment and total repaid. The term changes how many times interest is charged and how quickly principal falls.",
+    "example": "Use the same $20,000 amount and 8% rate for 36 and 60 months. The 60-month option is easier monthly, while the 36-month option retires principal faster.",
+    "table": [
+      [
+        "Shorter term",
+        "Higher payment"
+      ],
+      [
+        "Longer term",
+        "Lower payment"
+      ],
+      [
+        "Total interest",
+        "Often higher with more time"
+      ],
+      [
+        "Flexibility",
+        "Depends on the contract"
+      ]
+    ],
+    "mistakes": [
+      "Comparing different borrowing amounts",
+      "Ignoring total repaid",
+      "Choosing a payment with no emergency margin",
+      "Assuming extra payments are always handled the same"
+    ],
+    "steps": [
+      "Enter one amount and rate",
+      "Save the shorter-term scenario",
+      "Test the longer term",
+      "Compare total interest",
+      "Review prepayment rules"
+    ],
+    "sources": [
+      [
+        "https://www.consumerfinance.gov/owning-a-home/",
+        "CFPB homebuying tools and resources"
+      ]
+    ],
+    "keywords": [
+      "loan term",
+      "36 months",
+      "60 months",
+      "interest"
+    ],
+    "publish_date": "2026-08-28",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "apr-vs-interest-rate",
+    "title": "APR vs Interest Rate: What Each Number Tells You",
+    "category": "Loans",
+    "calculator": "loan-calculator.html",
+    "image": "og-loan.png",
+    "lead": "The interest rate drives scheduled interest, while APR can include certain costs used to compare credit offers.",
+    "concept": "APR and interest rate are related but not interchangeable. The exact treatment of fees depends on the product and local rules, so use official disclosure documents.",
+    "example": "Two loans can advertise the same interest rate while one has higher eligible fees. The loan with higher costs may show a higher APR even when the scheduled payment is similar.",
+    "table": [
+      [
+        "Interest rate",
+        "Cost applied to balance"
+      ],
+      [
+        "APR",
+        "Comparison measure including defined costs"
+      ],
+      [
+        "Monthly payment",
+        "May not use APR directly"
+      ],
+      [
+        "Loan disclosure",
+        "Source of official terms"
+      ]
+    ],
+    "mistakes": [
+      "Using APR as the payment rate",
+      "Ignoring fees excluded from APR",
+      "Comparing different terms",
+      "Relying on a calculator instead of disclosures"
+    ],
+    "steps": [
+      "Collect comparable offers",
+      "Match amount and term",
+      "Compare rate and APR",
+      "Review itemized fees",
+      "Ask the lender about unclear charges"
+    ],
+    "sources": [
+      [
+        "https://www.consumerfinance.gov/owning-a-home/",
+        "CFPB homebuying tools and resources"
+      ]
+    ],
+    "keywords": [
+      "apr",
+      "interest rate",
+      "loan",
+      "fees"
+    ],
+    "publish_date": "2026-09-04",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "extra-loan-payments",
+    "title": "How Extra Principal Payments Can Change a Loan Payoff",
+    "category": "Loans",
+    "calculator": "loan-calculator.html",
+    "image": "og-loan.png",
+    "lead": "An extra payment can reduce the outstanding balance used for future interest, but lender rules determine how it is applied.",
+    "concept": "The benefit is largest when the amount reaches principal promptly and no penalty offsets the saving. Protecting emergency cash can be more important than accelerating a low-payment loan.",
+    "example": "Take the current loan, record the scheduled total, then model a consistent extra monthly amount. Compare the new payoff point and interest while keeping the extra amount realistic.",
+    "table": [
+      [
+        "Scheduled payment",
+        "Contractual requirement"
+      ],
+      [
+        "Extra principal",
+        "Reduces balance"
+      ],
+      [
+        "Prepayment penalty",
+        "Possible contract cost"
+      ],
+      [
+        "Emergency savings",
+        "Liquidity before acceleration"
+      ]
+    ],
+    "mistakes": [
+      "Emptying savings to pay debt",
+      "Not confirming principal application",
+      "Ignoring higher-rate debts",
+      "Assuming the required payment will fall"
+    ],
+    "steps": [
+      "Read the agreement",
+      "Keep emergency savings",
+      "Confirm payment instructions",
+      "Model a sustainable extra amount",
+      "Check statements after payment"
+    ],
+    "sources": [
+      [
+        "https://www.consumerfinance.gov/owning-a-home/",
+        "CFPB homebuying tools and resources"
+      ]
+    ],
+    "keywords": [
+      "extra payment",
+      "principal",
+      "loan payoff",
+      "interest"
+    ],
+    "publish_date": "2026-09-11",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "emergency-fund-target",
+    "title": "How to Set an Emergency Fund Target That Fits Your Life",
+    "category": "Saving",
+    "calculator": "savings-goal-calculator.html",
+    "image": "og-savings.png",
+    "lead": "An emergency-fund target should reflect essential expenses, income stability and responsibilities, not a universal number.",
+    "concept": "Start with the expenses that must continue during an interruption. Then choose a cushion that reflects job stability, dependents, insurance and access to other safe funds.",
+    "example": "If essential expenses are $1,500 per month, a three-month first milestone is $4,500. A larger target can be built later without delaying the first useful buffer.",
+    "table": [
+      [
+        "Essential expenses",
+        "Core monthly base"
+      ],
+      [
+        "First milestone",
+        "A reachable buffer"
+      ],
+      [
+        "Full target",
+        "Longer protection"
+      ],
+      [
+        "Storage",
+        "Safe and accessible"
+      ]
+    ],
+    "mistakes": [
+      "Using total salary instead of expenses",
+      "Investing near-term emergency cash aggressively",
+      "Setting one distant target with no milestone",
+      "Using the fund for planned spending"
+    ],
+    "steps": [
+      "List essential expenses",
+      "Choose a first milestone",
+      "Set a deadline",
+      "Automate monthly transfers",
+      "Review after major life changes"
+    ],
+    "sources": [
+      [
+        "https://www.investor.gov/financial-tools-calculators/calculators/savings-goal-calculator",
+        "Investor.gov savings goal calculator"
+      ]
+    ],
+    "keywords": [
+      "emergency fund",
+      "savings goal",
+      "monthly expenses"
+    ],
+    "publish_date": "2026-09-18",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "choose-savings-deadline",
+    "title": "How a Savings Deadline Changes the Monthly Amount",
+    "category": "Saving",
+    "calculator": "savings-goal-calculator.html",
+    "image": "og-savings.png",
+    "lead": "The same target can require very different monthly contributions depending on the deadline.",
+    "concept": "A shorter deadline leaves fewer contributions and less time for growth. For near-term goals, conservative assumptions are usually more useful than optimistic returns.",
+    "example": "A $12,000 goal over 24 months needs about $500 per month before growth. Extending the plan to 36 months lowers the monthly amount but delays the purchase.",
+    "table": [
+      [
+        "Target",
+        "Desired final amount"
+      ],
+      [
+        "Starting balance",
+        "Already assigned savings"
+      ],
+      [
+        "Deadline",
+        "Number of contributions"
+      ],
+      [
+        "Assumed return",
+        "Planning input, not a promise"
+      ]
+    ],
+    "mistakes": [
+      "Picking a date with no budget check",
+      "Using high returns for a short horizon",
+      "Forgetting price changes",
+      "Waiting until the deadline is close"
+    ],
+    "steps": [
+      "Define the goal",
+      "Enter current savings",
+      "Test two deadlines",
+      "Choose a sustainable amount",
+      "Review progress monthly"
+    ],
+    "sources": [
+      [
+        "https://www.investor.gov/financial-tools-calculators/calculators/savings-goal-calculator",
+        "Investor.gov savings goal calculator"
+      ]
+    ],
+    "keywords": [
+      "savings deadline",
+      "monthly savings",
+      "goal"
+    ],
+    "publish_date": "2026-09-25",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "compound-frequency-explained",
+    "title": "Monthly vs Annual Compounding: How Frequency Affects Growth",
+    "category": "Investing basics",
+    "calculator": "compound-interest-calculator.html",
+    "image": "og-compound.png",
+    "lead": "Compounding frequency describes how often interest is added to the balance, but the quoted rate and contribution timing also matter.",
+    "concept": "More frequent compounding can increase the effective result when the nominal annual rate is held constant. The difference may be modest compared with saving more or waiting longer.",
+    "example": "Model $10,000 at the same nominal rate with annual and monthly compounding. Keep years and contributions identical so the comparison isolates frequency.",
+    "table": [
+      [
+        "Annual",
+        "Once per year"
+      ],
+      [
+        "Monthly",
+        "Twelve times per year"
+      ],
+      [
+        "Nominal rate",
+        "Quoted annual input"
+      ],
+      [
+        "Effective result",
+        "Reflects compounding"
+      ]
+    ],
+    "mistakes": [
+      "Changing rate and frequency together",
+      "Assuming frequency dominates time",
+      "Ignoring fees and tax",
+      "Treating projected growth as guaranteed"
+    ],
+    "steps": [
+      "Use the same starting amount",
+      "Keep one annual rate",
+      "Compare equal time periods",
+      "Add fees separately",
+      "Focus on sustainable contributions"
+    ],
+    "sources": [
+      [
+        "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+        "Investor.gov compound interest calculator"
+      ]
+    ],
+    "keywords": [
+      "compound frequency",
+      "monthly",
+      "annual",
+      "interest"
+    ],
+    "publish_date": "2026-10-02",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "inflation-and-future-value",
+    "title": "Future Value vs Buying Power: Why Inflation Matters",
+    "category": "Investing basics",
+    "calculator": "compound-interest-calculator.html",
+    "image": "og-compound.png",
+    "lead": "A future balance can be larger in currency terms while buying less than the same number would buy today.",
+    "concept": "Nominal growth shows the account value. Real growth adjusts for changes in prices. A planning model should avoid presenting the future number as guaranteed purchasing power.",
+    "example": "If a balance grows at 5% while prices rise at 2%, the rough real growth rate is lower than 5%. Use scenarios rather than one precise forecast.",
+    "table": [
+      [
+        "Nominal value",
+        "Future currency amount"
+      ],
+      [
+        "Inflation",
+        "General price change"
+      ],
+      [
+        "Real value",
+        "Purchasing-power view"
+      ],
+      [
+        "Fees and tax",
+        "Additional reductions"
+      ]
+    ],
+    "mistakes": [
+      "Calling nominal growth profit in real terms",
+      "Using one inflation forecast as certain",
+      "Ignoring the time horizon",
+      "Comparing values from different dates directly"
+    ],
+    "steps": [
+      "Calculate nominal growth",
+      "Choose a cautious inflation scenario",
+      "Compare real purchasing power",
+      "Include fees where known",
+      "Review assumptions each year"
+    ],
+    "sources": [
+      [
+        "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+        "Investor.gov compound interest calculator"
+      ]
+    ],
+    "keywords": [
+      "inflation",
+      "future value",
+      "real return",
+      "compound"
+    ],
+    "publish_date": "2026-10-09",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "roi-limitations",
+    "title": "What ROI Measures and What It Leaves Out",
+    "category": "Investing basics",
+    "calculator": "roi-calculator.html",
+    "image": "og-roi.png",
+    "lead": "ROI is a useful first comparison, but it does not automatically account for time, risk, cash-flow timing, fees or tax.",
+    "concept": "The basic formula divides profit or loss by the amount invested. Two projects with the same ROI can be very different if one took one year and the other took ten.",
+    "example": "An investment rising from $10,000 to $12,000 has a basic ROI of 20% before omitted costs. That result still needs a time period and risk context.",
+    "table": [
+      [
+        "Initial amount",
+        "Base investment"
+      ],
+      [
+        "Final value",
+        "Value at measurement"
+      ],
+      [
+        "Profit or loss",
+        "Final minus initial"
+      ],
+      [
+        "ROI",
+        "Profit divided by initial"
+      ]
+    ],
+    "mistakes": [
+      "Comparing different time periods",
+      "Ignoring fees and taxes",
+      "Treating ROI as a risk measure",
+      "Using estimated final values as facts"
+    ],
+    "steps": [
+      "Calculate basic ROI",
+      "State the holding period",
+      "Subtract known costs",
+      "Consider risk and liquidity",
+      "Compare like with like"
+    ],
+    "sources": [
+      [
+        "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+        "Investor.gov compound interest calculator"
+      ]
+    ],
+    "keywords": [
+      "roi",
+      "return",
+      "investment",
+      "limitations"
+    ],
+    "publish_date": "2026-10-16",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "gross-vs-net-pay",
+    "title": "Gross Pay vs Net Pay: Build a Budget From the Right Number",
+    "category": "Income",
+    "calculator": "income-tax-calculator.html",
+    "image": "og-salary.png",
+    "lead": "Gross pay is the headline amount. Net pay is the amount left after taxes and other deductions, so it is the safer starting point for a spending plan.",
+    "concept": "A simplified calculator can apply an effective tax rate, while a real payslip can include payroll taxes, pension, insurance and benefits.",
+    "example": "A $60,000 gross salary with a simplified 20% tax estimate gives $48,000 before other deductions. Divide the actual take-home amount by pay periods for budgeting.",
+    "table": [
+      [
+        "Gross pay",
+        "Before deductions"
+      ],
+      [
+        "Withholding",
+        "Tax collected from pay"
+      ],
+      [
+        "Other deductions",
+        "Benefits or contributions"
+      ],
+      [
+        "Net pay",
+        "Amount deposited"
+      ]
+    ],
+    "mistakes": [
+      "Budgeting from gross income",
+      "Confusing pay frequency with monthly pay",
+      "Ignoring benefit deductions",
+      "Assuming a generic tax rate is exact"
+    ],
+    "steps": [
+      "Read a current payslip",
+      "List every deduction",
+      "Calculate average take-home pay",
+      "Use a conservative monthly base",
+      "Recheck after income changes"
+    ],
+    "sources": [
+      [
+        "https://www.irs.gov/individuals/employees/tax-withholding",
+        "IRS tax withholding guidance"
+      ]
+    ],
+    "keywords": [
+      "gross pay",
+      "net pay",
+      "take home",
+      "salary"
+    ],
+    "publish_date": "2026-10-23",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "hourly-pay-total-compensation",
+    "title": "Hourly Pay to Salary: Compare More Than the Headline Number",
+    "category": "Income",
+    "calculator": "hourly-to-salary-calculator.html",
+    "image": "og-salary.png",
+    "lead": "Converting hourly pay to an annual figure is useful, but paid leave, overtime, benefits and unpaid weeks can change total compensation.",
+    "concept": "The basic conversion multiplies hourly rate, weekly hours and paid weeks. It does not automatically value insurance, retirement contributions or schedule stability.",
+    "example": "At $25 per hour, 40 hours a week and 52 paid weeks, gross annual pay is $52,000. If only 48 weeks are paid, the comparable figure is lower.",
+    "table": [
+      [
+        "Hourly rate",
+        "Pay per hour"
+      ],
+      [
+        "Weekly hours",
+        "Typical paid time"
+      ],
+      [
+        "Paid weeks",
+        "Exclude unpaid gaps"
+      ],
+      [
+        "Benefits",
+        "Evaluate separately"
+      ]
+    ],
+    "mistakes": [
+      "Always multiplying by 2,080 hours",
+      "Ignoring unpaid leave",
+      "Assuming overtime is guaranteed",
+      "Comparing salary without benefits"
+    ],
+    "steps": [
+      "Use realistic weekly hours",
+      "Enter paid weeks",
+      "Separate regular overtime",
+      "Estimate benefits cautiously",
+      "Compare net pay as well"
+    ],
+    "sources": [
+      [
+        "https://www.irs.gov/individuals/employees/tax-withholding",
+        "IRS tax withholding guidance"
+      ]
+    ],
+    "keywords": [
+      "hourly wage",
+      "salary",
+      "annual income",
+      "benefits"
+    ],
+    "publish_date": "2026-10-30",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "marginal-vs-effective-tax-rate",
+    "title": "Marginal vs Effective Tax Rate: The Difference in Plain English",
+    "category": "Tax basics",
+    "calculator": "income-tax-calculator.html",
+    "image": "og-tax.png",
+    "lead": "A marginal rate applies to the next layer of taxable income, while the effective rate compares total tax with total income.",
+    "concept": "Moving into a higher bracket does not normally apply the higher rate to every unit of income. A simplified take-home calculator asks for an effective rate because it is estimating total tax at once.",
+    "example": "If total tax is $10,000 on $50,000 of income, the simplified effective rate is 20%. The highest marginal bracket could be different.",
+    "table": [
+      [
+        "Marginal rate",
+        "Rate on the next layer"
+      ],
+      [
+        "Effective rate",
+        "Total tax divided by income"
+      ],
+      [
+        "Taxable income",
+        "Income after applicable adjustments"
+      ],
+      [
+        "Withholding",
+        "Payments during the year"
+      ]
+    ],
+    "mistakes": [
+      "Applying the top bracket to all income",
+      "Treating withholding as final liability",
+      "Ignoring local taxes and deductions",
+      "Using another country’s rules"
+    ],
+    "steps": [
+      "Identify the relevant jurisdiction",
+      "Use official current brackets",
+      "Calculate total estimated tax",
+      "Derive an effective rate",
+      "Review with a qualified professional when needed"
+    ],
+    "sources": [
+      [
+        "https://www.irs.gov/filing/federal-income-tax-rates-and-brackets",
+        "IRS explanation of tax brackets and marginal rates"
+      ]
+    ],
+    "keywords": [
+      "marginal tax",
+      "effective tax",
+      "bracket",
+      "income"
+    ],
+    "publish_date": "2026-11-06",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "percentage-change-vs-points",
+    "title": "Percentage Change vs Percentage Points: Avoid a Common Reporting Error",
+    "category": "Math",
+    "calculator": "percentage-calculator.html",
+    "image": "og-percentage.png",
+    "lead": "Percentage change and percentage-point change answer different questions, even when they use the same two rates.",
+    "concept": "Percentage points are found by subtraction. Relative percentage change divides the difference by the original rate.",
+    "example": "A rate moving from 10% to 12% rises by 2 percentage points. Relative to the original 10%, that is a 20% increase.",
+    "table": [
+      [
+        "Old rate",
+        "10%"
+      ],
+      [
+        "New rate",
+        "12%"
+      ],
+      [
+        "Point change",
+        "2 points"
+      ],
+      [
+        "Relative change",
+        "20%"
+      ]
+    ],
+    "mistakes": [
+      "Calling points percent",
+      "Using the new number as the base",
+      "Dividing by zero",
+      "Leaving the original value unstated"
+    ],
+    "steps": [
+      "Identify the original value",
+      "Subtract for point change",
+      "Divide by original for relative change",
+      "Label the unit clearly",
+      "Check if the result is plausible"
+    ],
+    "sources": [
+      [
+        "https://www.bls.gov/opub/mlr/2016/article/the-difference-between-percentage-change-and-percentage-point-change.htm",
+        "U.S. Bureau of Labor Statistics explanation of percentage points"
+      ]
+    ],
+    "keywords": [
+      "percentage change",
+      "percentage points",
+      "math"
+    ],
+    "publish_date": "2026-11-13",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "stacked-discounts",
+    "title": "Why Two Discounts Do Not Usually Add Together",
+    "category": "Shopping math",
+    "calculator": "discount-calculator.html",
+    "image": "og-discount.png",
+    "lead": "Two sequential discounts apply to different price bases, so 20% off followed by 10% off is not the same as 30% off.",
+    "concept": "The second discount is calculated after the first has already reduced the price. Multiply the remaining-price factors to combine them accurately.",
+    "example": "A $100 item falls to $80 after 20% off. A further 10% removes $8, leaving $72. The combined reduction is 28%.",
+    "table": [
+      [
+        "Original price",
+        "$100"
+      ],
+      [
+        "After 20% off",
+        "$80"
+      ],
+      [
+        "After another 10%",
+        "$72"
+      ],
+      [
+        "Combined discount",
+        "28%"
+      ]
+    ],
+    "mistakes": [
+      "Adding sequential percentages",
+      "Applying tax before checking store rules",
+      "Rounding every step",
+      "Ignoring coupon exclusions"
+    ],
+    "steps": [
+      "Write the original price",
+      "Apply the first discount",
+      "Use the new price for the second",
+      "Calculate tax separately",
+      "Compare with the receipt"
+    ],
+    "sources": [
+      [
+        "https://www.mathsisfun.com/percentage.html",
+        "Percentage concepts and worked examples"
+      ]
+    ],
+    "keywords": [
+      "discount",
+      "stacked discounts",
+      "percentage",
+      "price"
+    ],
+    "publish_date": "2026-11-20",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "sales-tax-and-discounts",
+    "title": "Sales Tax and Discounts: Which One Comes First?",
+    "category": "Shopping math",
+    "calculator": "sales-tax-calculator.html",
+    "image": "og-salestax.png",
+    "lead": "The order depends on local tax rules and how the discount is classified, so the receipt or official guidance is the final reference.",
+    "concept": "Mathematically, a percentage discount reduces the price base. Sales tax is then often applied to the taxable amount, but exemptions and coupons can change treatment.",
+    "example": "For a $100 item with 20% off, the discounted price is $80. If 8% tax applies to that amount, the tax is $6.40 and the total is $86.40.",
+    "table": [
+      [
+        "List price",
+        "$100"
+      ],
+      [
+        "Discounted price",
+        "$80"
+      ],
+      [
+        "Example tax",
+        "$6.40"
+      ],
+      [
+        "Example total",
+        "$86.40"
+      ]
+    ],
+    "mistakes": [
+      "Assuming every coupon changes taxable price",
+      "Using the wrong local rate",
+      "Rounding before the final step",
+      "Treating an estimate as tax advice"
+    ],
+    "steps": [
+      "Check the receipt rules",
+      "Calculate the discount",
+      "Identify the taxable base",
+      "Apply the correct rate",
+      "Keep final rounding consistent"
+    ],
+    "sources": [
+      [
+        "https://www.irs.gov/businesses/small-businesses-self-employed/state-government-websites",
+        "IRS directory of U.S. state government tax resources"
+      ]
+    ],
+    "keywords": [
+      "sales tax",
+      "discount",
+      "price",
+      "percentage"
+    ],
+    "publish_date": "2026-11-27",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "fuel-trip-budget",
+    "title": "How to Build a Fuel Budget for a Road Trip",
+    "category": "Travel math",
+    "calculator": "fuel-cost-calculator.html",
+    "image": "og-fuelcost.png",
+    "lead": "A useful trip budget separates fuel from tolls, parking, maintenance and accommodation.",
+    "concept": "Fuel cost depends on distance, vehicle efficiency and price per unit. Using a recent real-world efficiency figure is usually better than a best-case specification.",
+    "example": "For a 600 km trip at 7 L/100 km, estimated fuel use is 42 litres. Multiply by the current price per litre, then add non-fuel costs separately.",
+    "table": [
+      [
+        "Distance",
+        "Total planned travel"
+      ],
+      [
+        "Efficiency",
+        "Realistic consumption"
+      ],
+      [
+        "Fuel price",
+        "Current local price"
+      ],
+      [
+        "Other costs",
+        "Tolls, parking, maintenance"
+      ]
+    ],
+    "mistakes": [
+      "Mixing kilometres and miles",
+      "Using highway efficiency for city driving",
+      "Forgetting the return trip",
+      "Treating fuel as the full trip cost"
+    ],
+    "steps": [
+      "Map the full distance",
+      "Use recent vehicle efficiency",
+      "Check current fuel price",
+      "Add a contingency",
+      "Track actual cost for next time"
+    ],
+    "sources": [
+      [
+        "https://www.energy.gov/energysaver/fuel-economy",
+        "U.S. Department of Energy fuel economy information"
+      ]
+    ],
+    "keywords": [
+      "fuel cost",
+      "road trip",
+      "distance",
+      "efficiency"
+    ],
+    "publish_date": "2026-12-04",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "bmi-limitations",
+    "title": "When BMI Is Useful and When It Can Mislead",
+    "category": "Health",
+    "calculator": "bmi-calculator.html",
+    "image": "og-bmi.png",
+    "lead": "BMI is a quick screening measure, but it does not distinguish fat, muscle and bone or show where body fat is carried.",
+    "concept": "For adults, BMI is interpreted with general categories. Individual health assessment can also consider blood pressure, history, laboratory information and physical examination.",
+    "example": "A muscular adult can have a higher BMI without the same body composition as another person with that result. The number is a prompt for context, not a diagnosis.",
+    "table": [
+      [
+        "BMI strength",
+        "Fast screening"
+      ],
+      [
+        "BMI limit",
+        "No direct body-fat measure"
+      ],
+      [
+        "Individual context",
+        "Other health information"
+      ],
+      [
+        "Children",
+        "Need age-specific interpretation"
+      ]
+    ],
+    "mistakes": [
+      "Calling BMI a diagnosis",
+      "Applying adult categories to children",
+      "Assuming every person with one BMI is alike",
+      "Ignoring measurement errors"
+    ],
+    "steps": [
+      "Measure height and weight carefully",
+      "Calculate the screening result",
+      "Review limitations",
+      "Consider other information",
+      "Discuss concerns with a professional"
+    ],
+    "sources": [
+      [
+        "https://www.cdc.gov/bmi/about/index.html",
+        "CDC explanation and limitations of BMI"
+      ]
+    ],
+    "keywords": [
+      "bmi",
+      "limitations",
+      "body mass index",
+      "health"
+    ],
+    "publish_date": "2026-12-11",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "measure-body-circumferences",
+    "title": "How to Measure Body Circumferences Consistently",
+    "category": "Health",
+    "calculator": "body-fat-calculator.html",
+    "image": "og-bodyfat.png",
+    "lead": "Circumference-based body-fat estimates are most useful when measurements are taken consistently.",
+    "concept": "Tape position, tension, posture, breathing and time of day can change the number. A repeatable process helps distinguish measurement noise from a real trend.",
+    "example": "Measure at the labeled anatomical location with the tape level and snug but not compressing the skin. Repeat the measurement and use the same method later.",
+    "table": [
+      [
+        "Tape position",
+        "Use the same landmark"
+      ],
+      [
+        "Tension",
+        "Snug, not compressing"
+      ],
+      [
+        "Timing",
+        "Similar conditions"
+      ],
+      [
+        "Interpretation",
+        "Estimate, not diagnosis"
+      ]
+    ],
+    "mistakes": [
+      "Pulling the tape too tightly",
+      "Measuring a different location each time",
+      "Comparing methods as if identical",
+      "Reacting to one reading"
+    ],
+    "steps": [
+      "Read the calculator instructions",
+      "Use a flexible tape",
+      "Take two measurements",
+      "Record the method",
+      "Focus on trends over time"
+    ],
+    "sources": [
+      [
+        "https://www.cdc.gov/healthy-weight-growth/about/index.html",
+        "CDC healthy weight and growth overview"
+      ]
+    ],
+    "keywords": [
+      "body fat",
+      "circumference",
+      "measurement",
+      "health"
+    ],
+    "publish_date": "2026-12-18",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "maintenance-calories",
+    "title": "Maintenance Calories: Why the Estimate Is Only a Starting Point",
+    "category": "Nutrition",
+    "calculator": "calorie-calculator.html",
+    "image": "og-calorie.png",
+    "lead": "A calorie calculator estimates energy needs from a formula and activity factor. Real needs vary between people and over time.",
+    "concept": "Basal metabolic rate estimates energy used at rest. Total daily expenditure applies an activity assumption. Food tracking and activity estimates also contain error.",
+    "example": "Use the calculated maintenance estimate consistently for several weeks, then compare it with the direction of body-weight and wellbeing trends before making gradual changes.",
+    "table": [
+      [
+        "BMR",
+        "Estimated resting need"
+      ],
+      [
+        "Activity factor",
+        "Movement assumption"
+      ],
+      [
+        "Maintenance",
+        "Estimated stable-intake level"
+      ],
+      [
+        "Observation",
+        "Used to refine the estimate"
+      ]
+    ],
+    "mistakes": [
+      "Choosing an inflated activity level",
+      "Treating the result as exact",
+      "Making a large unmonitored change",
+      "Using an adult formula for special situations"
+    ],
+    "steps": [
+      "Calculate a starting estimate",
+      "Choose realistic activity",
+      "Track consistently",
+      "Review a multi-week trend",
+      "Seek professional guidance when appropriate"
+    ],
+    "sources": [
+      [
+        "https://www.cdc.gov/healthy-weight-growth/about/index.html",
+        "CDC healthy weight and growth overview"
+      ]
+    ],
+    "keywords": [
+      "maintenance calories",
+      "tdee",
+      "bmr",
+      "nutrition"
+    ],
+    "publish_date": "2026-12-25",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "hydration-needs-vary",
+    "title": "Why Daily Water Needs Change From Day to Day",
+    "category": "Hydration",
+    "calculator": "water-intake-calculator.html",
+    "image": "og-water.png",
+    "lead": "Hydration needs vary with climate, activity, illness, pregnancy, breastfeeding, food and medical circumstances.",
+    "concept": "Water comes from beverages and foods. Heat, fever, vomiting, diarrhea and physical activity can increase fluid needs, while some conditions require professional guidance.",
+    "example": "Use the calculator as a general starting point, then consider weather, exercise and instructions from a qualified healthcare professional.",
+    "table": [
+      [
+        "Climate",
+        "Heat can raise needs"
+      ],
+      [
+        "Activity",
+        "Sweat changes losses"
+      ],
+      [
+        "Food",
+        "Contributes fluid"
+      ],
+      [
+        "Health conditions",
+        "May require specific advice"
+      ]
+    ],
+    "mistakes": [
+      "Treating one target as universal",
+      "Forcing excessive water quickly",
+      "Ignoring illness or medicines",
+      "Counting only plain water"
+    ],
+    "steps": [
+      "Start with a general estimate",
+      "Spread intake through the day",
+      "Adjust for activity and heat",
+      "Observe practical hydration cues",
+      "Follow medical instructions when provided"
+    ],
+    "sources": [
+      [
+        "https://www.cdc.gov/healthy-weight-growth/water-healthy-drinks/index.html",
+        "CDC guidance on water and healthier drinks"
+      ]
+    ],
+    "keywords": [
+      "water intake",
+      "hydration",
+      "exercise",
+      "health"
+    ],
+    "publish_date": "2027-01-01",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "ideal-weight-formulas",
+    "title": "Why Ideal-Weight Formulas Give Different Answers",
+    "category": "Health",
+    "calculator": "ideal-weight-calculator.html",
+    "image": "og-idealweight.png",
+    "lead": "Ideal-weight formulas are historical reference equations, not precise personal targets.",
+    "concept": "Different formulas use different assumptions about height and sex categories. They do not fully account for body composition, frame, age or health history.",
+    "example": "Treat the calculator output as a range of reference values. If two formulas differ, that difference is evidence that one exact number should not be treated as a requirement.",
+    "table": [
+      [
+        "Formula output",
+        "A reference estimate"
+      ],
+      [
+        "Height",
+        "Primary input"
+      ],
+      [
+        "Body composition",
+        "Not fully represented"
+      ],
+      [
+        "Personal target",
+        "Needs individual context"
+      ]
+    ],
+    "mistakes": [
+      "Chasing one exact number",
+      "Ignoring muscle and frame size",
+      "Treating formulas as medical advice",
+      "Comparing adults with children"
+    ],
+    "steps": [
+      "Review the range",
+      "Check BMI limitations",
+      "Consider body composition",
+      "Focus on sustainable habits",
+      "Ask a professional about personal goals"
+    ],
+    "sources": [
+      [
+        "https://www.cdc.gov/bmi/about/index.html",
+        "CDC explanation and limitations of BMI"
+      ]
+    ],
+    "keywords": [
+      "ideal weight",
+      "formula",
+      "healthy range",
+      "bmi"
+    ],
+    "publish_date": "2027-01-08",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "inclusive-vs-exclusive-dates",
+    "title": "Inclusive vs Exclusive Date Counting Explained",
+    "category": "Date math",
+    "calculator": "date-difference-calculator.html",
+    "image": "og-datediff.png",
+    "lead": "Date differences change depending on whether the starting day, ending day or both are counted.",
+    "concept": "Elapsed time usually excludes the starting instant. Inclusive counting is often used for schedules where both calendar dates belong to the period.",
+    "example": "From August 1 to August 3, elapsed date difference is two days. Counting August 1, 2 and 3 as included calendar days gives three.",
+    "table": [
+      [
+        "Elapsed counting",
+        "End minus start"
+      ],
+      [
+        "Inclusive counting",
+        "Adds included boundary"
+      ],
+      [
+        "Business days",
+        "May exclude weekends"
+      ],
+      [
+        "Time zones",
+        "Matter when times are included"
+      ]
+    ],
+    "mistakes": [
+      "Not stating the convention",
+      "Mixing dates and timestamps",
+      "Forgetting leap days",
+      "Using calendar months as fixed day counts"
+    ],
+    "steps": [
+      "Define the counting rule",
+      "Enter dates in one format",
+      "Check start before end",
+      "Account for business-day rules separately",
+      "Label the result clearly"
+    ],
+    "sources": [
+      [
+        "https://www.nist.gov/pml/time-and-frequency-division",
+        "NIST time and frequency resources"
+      ]
+    ],
+    "keywords": [
+      "date difference",
+      "inclusive dates",
+      "elapsed days"
+    ],
+    "publish_date": "2027-01-15",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  },
+  {
+    "slug": "age-calculation-leap-day",
+    "title": "How Age Calculation Handles Birthdays and Leap Days",
+    "category": "Date math",
+    "calculator": "age-calculator.html",
+    "image": "og-age.png",
+    "lead": "Age in completed years depends on whether the birthday has occurred in the current calendar year.",
+    "concept": "A leap-day birthday requires the real calendar and sometimes a legal rule for non-leap years. A website estimate cannot decide jurisdiction-specific legal age questions.",
+    "example": "For most dates, subtract the birth year and reduce the result by one when the birthday has not yet occurred this year.",
+    "table": [
+      [
+        "Completed years",
+        "Full birthdays passed"
+      ],
+      [
+        "Months and days",
+        "Remaining calendar interval"
+      ],
+      [
+        "Leap-day birth",
+        "Calendar edge case"
+      ],
+      [
+        "Legal age",
+        "May follow local rules"
+      ]
+    ],
+    "mistakes": [
+      "Subtracting years only",
+      "Treating every year as 365 days",
+      "Ignoring date order",
+      "Using a calculator for legal determinations"
+    ],
+    "steps": [
+      "Enter the exact birth date",
+      "Use the current or target date",
+      "Check whether birthday passed",
+      "Review leap-day context",
+      "Verify legal questions locally"
+    ],
+    "sources": [
+      [
+        "https://www.nist.gov/pml/time-and-frequency-division",
+        "NIST time and frequency resources"
+      ]
+    ],
+    "keywords": [
+      "age calculator",
+      "birthday",
+      "leap day",
+      "date"
+    ],
+    "publish_date": "2027-01-22",
+    "status": "scheduled",
+    "reviewer": "Yasser Chahir, Fynzo editor",
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+  }
+]
