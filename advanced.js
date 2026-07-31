@@ -39,3 +39,36 @@ function renderList(id,list){var box=document.getElementById(id);if(!box)return;
 function setupPersonal(){renderList("favoriteTools",getList("fynzo-favorites"));renderList("recentTools",getList("fynzo-recent"));var clear=document.getElementById("clearRecent");if(clear)clear.addEventListener("click",function(){localStorage.removeItem("fynzo-recent");renderList("recentTools",[]);});}
 document.addEventListener("DOMContentLoaded",function(){addRecent();setupFavorite();setupPersonal();setupObserver();setupCompare();setupSchedule();setupExport();document.querySelectorAll("#fx [data-k]").forEach(function(el){el.addEventListener("input",function(){drawChart();refreshAdvanced();});});});
 })();
+
+/* Focused mortgage/loan comparisons and personalized next steps. */
+(function(){"use strict";
+function field(key){return document.querySelector('#fx [data-k="'+key+'"]');}
+function trigger(el){if(!el)return;el.dispatchEvent(new Event("input",{bubbles:true}));}
+function currentFile(){return location.pathname.split("/").pop()||"index.html";}
+function setupQuickCompare(){
+  document.querySelectorAll(".quick-compare-actions button").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      var file=currentFile(),action=btn.getAttribute("data-quick"),rate=field("rate"),term=file==="mortgage-calculator.html"?field("term"):field("months");
+      if(action==="rate-down"&&rate) rate.value=Math.max(0,(parseFloat(rate.value)||0)-0.5).toFixed(2);
+      if(action==="rate-up"&&rate) rate.value=((parseFloat(rate.value)||0)+0.5).toFixed(2);
+      if(action==="term-short"&&term){var step=file==="mortgage-calculator.html"?5:12;term.value=Math.max(step,(parseFloat(term.value)||step)-step);}
+      if(action==="term-long"&&term){var add=file==="mortgage-calculator.html"?5:12;term.value=(parseFloat(term.value)||0)+add;}
+      trigger(rate);trigger(term);
+      var saveB=document.querySelector('[data-save-scenario="B"]');
+      if(saveB) window.setTimeout(function(){saveB.click();},30);
+    });
+  });
+}
+function personalizeNextSteps(){
+  var box=document.querySelector('[data-smart-next="true"]');
+  if(!box)return;
+  var file=currentFile(),result=document.querySelector("#res .rbig"),value=result?result.textContent.trim():"this result";
+  box.querySelectorAll("a[data-reason]").forEach(function(link){
+    var reason=link.getAttribute("data-reason");
+    link.setAttribute("title",reason);
+    if(!link.querySelector("small")){var small=document.createElement("small");small.textContent=reason;link.appendChild(small);}
+  });
+  box.setAttribute("aria-label","Recommended next tools based on "+value+" from "+file);
+}
+document.addEventListener("DOMContentLoaded",function(){setupQuickCompare();personalizeNextSteps();var result=document.getElementById("res");if(result)new MutationObserver(personalizeNextSteps).observe(result,{childList:true,subtree:true,characterData:true});});
+})();

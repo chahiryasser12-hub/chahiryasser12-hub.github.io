@@ -1,5 +1,5 @@
 /* Fynzo Service Worker — offline support */
-const CACHE="fynzo-v7";
+const CACHE="fynzo-v8";
 const CORE=["/", "/index.html", "/styles.css", "/fynzo.js", "/advanced.js", "/favicon.svg", "/hero.svg", "/logo-full.svg", "/blog.html", "/about.html", "/manifest.json", "/mortgage-calculator.html", "/loan-calculator.html", "/compound-interest-calculator.html", "/savings-goal-calculator.html", "/income-tax-calculator.html", "/roi-calculator.html", "/hourly-to-salary-calculator.html", "/bmi-calculator.html", "/calorie-calculator.html", "/body-fat-calculator.html", "/ideal-weight-calculator.html", "/water-intake-calculator.html"];
 self.addEventListener("install",function(e){self.skipWaiting();e.waitUntil(caches.open(CACHE).then(function(c){return c.addAll(CORE);}).catch(function(){}));});
 self.addEventListener("activate",function(e){e.waitUntil(caches.keys().then(function(k){return Promise.all(k.filter(function(x){return x!==CACHE;}).map(function(x){return caches.delete(x);}));}));self.clients.claim();});
