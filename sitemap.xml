@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://fynzo.me/</loc><lastmod>2026-07-31</lastmod><priority>1.0</priority></url>
-  <url><loc>https://fynzo.me/blog.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
   <url><loc>https://fynzo.me/about.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
-  <url><loc>https://fynzo.me/contact.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
-  <url><loc>https://fynzo.me/privacy.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
-  <url><loc>https://fynzo.me/terms.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
-  <url><loc>https://fynzo.me/disclaimer.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
-  <url><loc>https://fynzo.me/mortgage-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fynzo.me/loan-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fynzo.me/compound-interest-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fynzo.me/savings-goal-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fynzo.me/income-tax-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fynzo.me/roi-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fynzo.me/hourly-to-salary-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fynzo.me/bmi-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fynzo.me/calorie-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fynzo.me/body-fat-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fynzo.me/ideal-weight-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fynzo.me/water-intake-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://fynzo.me/blog-how-much-house-can-i-afford.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/age-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://fynzo.me/blog-compound-interest-explained.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
-  <url><loc>https://fynzo.me/blog-pay-off-loan-faster.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
-  <url><loc>https://fynzo.me/blog-how-to-calculate-bmi.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/blog-create-strong-passwords.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
   <url><loc>https://fynzo.me/blog-how-many-calories-should-i-eat.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/blog-how-much-house-can-i-afford.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/blog-how-much-to-save-each-month.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/blog-how-to-calculate-bmi.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/blog-master-percentages.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/blog-metric-vs-imperial.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/blog-pay-off-loan-faster.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/blog-understand-your-take-home-pay.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/blog.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/bmi-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/body-fat-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/calorie-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/compound-interest-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/contact.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/date-difference-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/disclaimer.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/discount-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/fuel-cost-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/hourly-to-salary-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/ideal-weight-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/income-tax-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/</loc><lastmod>2026-07-31</lastmod><priority>1.0</priority></url>
+  <url><loc>https://fynzo.me/length-converter.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/loan-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/mortgage-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/password-generator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/percentage-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/privacy.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/roi-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/sales-tax-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/savings-goal-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/temperature-converter.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/terms.html</loc><lastmod>2026-07-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fynzo.me/tip-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://fynzo.me/water-intake-calculator.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
 </urlset>

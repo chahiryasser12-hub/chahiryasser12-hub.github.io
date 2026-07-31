@@ -96,12 +96,7 @@ def rebuild_blog(published):
     open("blog.html","w").write(body)
 
 def rebuild_sitemap(published):
-    core=["","blog.html","about.html","contact.html","privacy.html","terms.html","disclaimer.html",
-    "mortgage-calculator.html","loan-calculator.html","compound-interest-calculator.html","savings-goal-calculator.html",
-    "income-tax-calculator.html","roi-calculator.html","hourly-to-salary-calculator.html","bmi-calculator.html",
-    "calorie-calculator.html","body-fat-calculator.html","ideal-weight-calculator.html","water-intake-calculator.html",
-    "blog-how-much-house-can-i-afford.html","blog-compound-interest-explained.html","blog-pay-off-loan-faster.html",
-    "blog-how-to-calculate-bmi.html","blog-how-many-calories-should-i-eat.html"]
+    core=['about.html','age-calculator.html','blog.html','bmi-calculator.html','body-fat-calculator.html','calorie-calculator.html','compound-interest-calculator.html','contact.html','date-difference-calculator.html','disclaimer.html','discount-calculator.html','fuel-cost-calculator.html','hourly-to-salary-calculator.html','ideal-weight-calculator.html','income-tax-calculator.html',"",'length-converter.html','loan-calculator.html','mortgage-calculator.html','password-generator.html','percentage-calculator.html','privacy.html','roi-calculator.html','sales-tax-calculator.html','savings-goal-calculator.html','temperature-converter.html','terms.html','tip-calculator.html','water-intake-calculator.html','blog-compound-interest-explained.html','blog-create-strong-passwords.html','blog-how-many-calories-should-i-eat.html','blog-how-much-house-can-i-afford.html','blog-how-much-to-save-each-month.html','blog-how-to-calculate-bmi.html','blog-master-percentages.html','blog-metric-vs-imperial.html','blog-pay-off-loan-faster.html','blog-understand-your-take-home-pay.html']
     urls=core+["blog-"+p["slug"]+".html" for p in published]
     sm='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     for u in urls:
