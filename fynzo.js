@@ -1,88 +1,24 @@
-/* ============================================================
-   Fynzo — core script  (FIXED + IMPROVED, 2026)
-   ✔ Theme toggle (light/dark) with localStorage — no flash
-   ✔ Language switcher EN / FR / AR  — BUG FIXED: uses ABSOLUTE
-     paths so the chosen language STICKS on every page
-   ✔ Auto RTL + lang attribute for Arabic
-   ✔ Accessible: aria-labels, keyboard & focus friendly
-   Replace your old fynzo.js with this file.
-   ============================================================ */
-(function () {
-  "use strict";
-
-  var FL = (window.FL || document.documentElement.lang || "en").slice(0, 2);
-
-  /* ---- Apply saved theme immediately (prevents flash of wrong theme) ---- */
-  if (localStorage.getItem("ft") === "dark") {
-    document.documentElement.setAttribute("data-theme", "dark");
-  }
-
-  /* ---- Theme toggle ---- */
-  function toggleTheme() {
-    var isDark = document.documentElement.getAttribute("data-theme") === "dark";
-    if (isDark) {
-      document.documentElement.removeAttribute("data-theme");
-      localStorage.setItem("ft", "light");
-    } else {
-      document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.setItem("ft", "dark");
-    }
-  }
-
-  /* ---- Current page filename e.g. "bmi-calculator.html" ---- */
-  function slug() {
-    return location.pathname.split("/").pop() || "index.html";
-  }
-
-  /* ---- FIXED language switch: ABSOLUTE paths keep you on the
-         same page in the chosen language (EN=/, FR=/fr/, AR=/ar/) ---- */
-  function switchLang(to) {
-    var page = slug();
-    var base = to === "en" ? "/" : "/" + to + "/";
-    window.location.href = base + page;
-  }
-
-  /* ---- Build nav tools (theme button + language select) ---- */
-  function build() {
-    var nl = document.querySelector(".nav-links");
-    if (!nl) return;
-
-    var wrap = document.createElement("div");
-    wrap.className = "nav-tools";
-    wrap.innerHTML =
-      '<button id="ft-theme" class="icon-btn" type="button" ' +
-      'aria-label="Toggle dark mode" title="Toggle dark mode">' +
-      '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
-      'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
-      '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>' +
-      '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
-      'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
-      '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4' +
-      'M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>' +
-      "</button>" +
-      '<select id="ft-lang" class="lang-select" aria-label="Choose language">' +
-      '<option value="en">EN</option>' +
-      '<option value="fr">FR</option>' +
-      '<option value="ar">AR</option>' +
-      "</select>";
-    nl.appendChild(wrap);
-
-    wrap.querySelector("#ft-theme").addEventListener("click", toggleTheme);
-    var sel = wrap.querySelector("#ft-lang");
-    sel.value = FL;
-    sel.addEventListener("change", function () { switchLang(sel.value); });
-  }
-
-  /* ---- Auto RTL for Arabic ---- */
-  function applyDir() {
-    if (FL === "ar") {
-      document.documentElement.setAttribute("dir", "rtl");
-      document.documentElement.setAttribute("lang", "ar");
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    applyDir();
-    build();
-  });
+/* Fynzo shared UI — dark mode (light default), nav search, languages EN/FR/AR */
+(function(){"use strict";
+if(localStorage.getItem('fynzo-theme')==='dark') document.documentElement.setAttribute('data-theme','dark');
+function toggleTheme(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('fynzo-theme','light');}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('fynzo-theme','dark');}}
+var T={fr:{"Calculators":"Calculatrices","Blog":"Blog","About":"À propos","Contact":"Contact","Start free":"Commencer","Tools":"Outils","Company":"Entreprise","Legal":"Légal","Finance":"Finance","Health":"Santé","All tools":"Tous les outils","Mortgage":"Hypothèque","Loan":"Prêt","Compound interest":"Intérêts composés","Privacy":"Confidentialité","Terms":"Conditions","Disclaimer":"Avertissement","Free, fast, private calculators for the money and health decisions that matter.":"Des calculatrices gratuites, rapides et privées.","Pick a calculator":"Choisissez une calculatrice","Why Fynzo?":"Pourquoi Fynzo ?"},
+ar:{"Calculators":"الحاسبات","Blog":"المدونة","About":"من نحن","Contact":"اتصل بنا","Start free":"ابدأ مجانًا","Tools":"الأدوات","Company":"الشركة","Legal":"قانوني","Finance":"المال","Health":"الصحة","All tools":"كل الأدوات","Mortgage":"القرض العقاري","Loan":"القرض","Compound interest":"الفائدة المركبة","Privacy":"الخصوصية","Terms":"الشروط","Disclaimer":"إخلاء المسؤولية","Free, fast, private calculators for the money and health decisions that matter.":"حاسبات مجانية وسريعة وخاصة.","Pick a calculator":"اختر حاسبة","Why Fynzo?":"لماذا Fynzo؟"}};
+var SEL='.nav-links a, .foot h4, .foot a, .foot-brand p, .sec-head h2, .filter, .prose h2';
+function applyLang(lang){var d=T[lang];
+document.querySelectorAll(SEL).forEach(function(el){if(!el.hasAttribute('data-en'))el.setAttribute('data-en',el.textContent.trim());var en=el.getAttribute('data-en');if(lang==='en'){el.textContent=en;}else if(d&&d[en]){el.textContent=d[en];}});
+var h1=document.querySelector('.hero h1');if(h1){if(lang==='fr')h1.innerHTML='Toutes vos <span>calculatrices</span> d\'argent et de santé — en un seul endroit.';else if(lang==='ar')h1.innerHTML='كل <span>حاسبات</span> المال والصحة — في مكان واحد.';else h1.innerHTML='All your money &amp; health <span>calculators</span> — in one place.';}
+var cs=document.getElementById('calcSearch');if(cs){cs.placeholder=lang==='fr'?'Rechercher — ex. « hypothèque », « IMC »...':lang==='ar'?'ابحث — جرّب «قرض»...':'Search a calculator — try "mortgage", "BMI", "loan"...';}
+document.documentElement.setAttribute('lang',lang);if(lang==='ar')document.documentElement.setAttribute('dir','rtl');else document.documentElement.removeAttribute('dir');localStorage.setItem('fynzo-lang',lang);}
+function build(){var nl=document.querySelector('.nav-links');if(!nl)return;var w=document.createElement('div');w.className='nav-tools';
+w.innerHTML='<div class="nav-search" id="navSearch"><input type="text" placeholder="Search…" aria-label="Search"><button class="go" aria-label="Go"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12 H19 M13 6 L19 12 L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div><button class="icon-btn" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20 L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><button class="icon-btn" id="themeToggle" aria-label="Theme"><svg class="sun" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none"><path d="M20 14.5 A8 8 0 1 1 9.5 4 A6.5 6.5 0 0 0 20 14.5 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button><select class="lang-select" id="langSelect" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="ar">AR</option></select>';
+nl.appendChild(w);
+var box=w.querySelector('#navSearch'),inp=box.querySelector('input');
+w.querySelector('#searchToggle').addEventListener('click',function(){box.classList.toggle('open');if(box.classList.contains('open'))inp.focus();});
+function go(){var q=inp.value.trim();if(!q)return;if(document.getElementById('calcSearch')){var cs=document.getElementById('calcSearch');cs.value=q;cs.dispatchEvent(new Event('input'));document.getElementById('tools').scrollIntoView({behavior:'smooth'});}else{window.location='index.html?q='+encodeURIComponent(q)+'#tools';}}
+inp.addEventListener('keydown',function(e){if(e.key==='Enter')go();});box.querySelector('.go').addEventListener('click',go);
+w.querySelector('#themeToggle').addEventListener('click',toggleTheme);
+var ls=w.querySelector('#langSelect'),sl=localStorage.getItem('fynzo-lang')||'en';ls.value=sl;ls.addEventListener('change',function(){applyLang(ls.value);});applyLang(sl);}
+function qp(){var cs=document.getElementById('calcSearch');if(!cs)return;var q=new URLSearchParams(location.search).get('q');if(q){cs.value=q;cs.dispatchEvent(new Event('input'));var t=document.getElementById('tools');if(t)setTimeout(function(){t.scrollIntoView({behavior:'smooth'});},200);}}
+document.addEventListener('DOMContentLoaded',function(){build();qp();});
 })();

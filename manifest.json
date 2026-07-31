@@ -1,1 +1,23 @@
-{"name":"Fynzo","short_name":"Fynzo","start_url":"/","display":"standalone","background_color":"#f7f8fa","theme_color":"#0b1020","icons":[{"src":"/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},{"src":"/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},{"src":"/icon-512-maskable.png","sizes":"512x512","type":"image/png","purpose":"maskable"}]}
+{
+  "name": "Fynzo — Finance & Health Calculators",
+  "short_name": "Fynzo",
+  "description": "Free, fast, private finance and health calculators.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f8fa",
+  "theme_color": "#0b1020",
+  "lang": "en",
+  "categories": ["finance","health","utilities"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Mortgage Calculator", "url": "/mortgage-calculator.html" },
+    { "name": "BMI Calculator", "url": "/bmi-calculator.html" },
+    { "name": "Compound Interest", "url": "/compound-interest-calculator.html" }
+  ]
+}
