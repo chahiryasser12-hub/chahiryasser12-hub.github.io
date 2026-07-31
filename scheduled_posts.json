@@ -55,7 +55,8 @@
     "publish_date": "2026-08-07",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/compare-mortgage-rates.svg"
   },
   {
     "slug": "down-payment-and-closing-costs",
@@ -112,7 +113,8 @@
     "publish_date": "2026-08-14",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/down-payment-and-closing-costs.svg"
   },
   {
     "slug": "fixed-vs-variable-rate",
@@ -169,7 +171,8 @@
     "publish_date": "2026-08-21",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/fixed-vs-variable-rate.svg"
   },
   {
     "slug": "loan-term-36-vs-60-months",
@@ -226,7 +229,8 @@
     "publish_date": "2026-08-28",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/loan-term-36-vs-60-months.svg"
   },
   {
     "slug": "apr-vs-interest-rate",
@@ -283,7 +287,8 @@
     "publish_date": "2026-09-04",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/apr-vs-interest-rate.svg"
   },
   {
     "slug": "extra-loan-payments",
@@ -340,7 +345,8 @@
     "publish_date": "2026-09-11",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/extra-loan-payments.svg"
   },
   {
     "slug": "emergency-fund-target",
@@ -396,7 +402,8 @@
     "publish_date": "2026-09-18",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/emergency-fund-target.svg"
   },
   {
     "slug": "choose-savings-deadline",
@@ -452,7 +459,8 @@
     "publish_date": "2026-09-25",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/choose-savings-deadline.svg"
   },
   {
     "slug": "compound-frequency-explained",
@@ -509,7 +517,8 @@
     "publish_date": "2026-10-02",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/compound-frequency-explained.svg"
   },
   {
     "slug": "inflation-and-future-value",
@@ -566,7 +575,8 @@
     "publish_date": "2026-10-09",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/inflation-and-future-value.svg"
   },
   {
     "slug": "roi-limitations",
@@ -623,7 +633,8 @@
     "publish_date": "2026-10-16",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/roi-limitations.svg"
   },
   {
     "slug": "gross-vs-net-pay",
@@ -680,7 +691,8 @@
     "publish_date": "2026-10-23",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/gross-vs-net-pay.svg"
   },
   {
     "slug": "hourly-pay-total-compensation",
@@ -737,7 +749,8 @@
     "publish_date": "2026-10-30",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/hourly-pay-total-compensation.svg"
   },
   {
     "slug": "marginal-vs-effective-tax-rate",
@@ -794,7 +807,8 @@
     "publish_date": "2026-11-06",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/marginal-vs-effective-tax-rate.svg"
   },
   {
     "slug": "percentage-change-vs-points",
@@ -850,7 +864,8 @@
     "publish_date": "2026-11-13",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/percentage-change-vs-points.svg"
   },
   {
     "slug": "stacked-discounts",
@@ -907,7 +922,8 @@
     "publish_date": "2026-11-20",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/stacked-discounts.svg"
   },
   {
     "slug": "sales-tax-and-discounts",
@@ -964,7 +980,8 @@
     "publish_date": "2026-11-27",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/sales-tax-and-discounts.svg"
   },
   {
     "slug": "fuel-trip-budget",
@@ -1021,7 +1038,8 @@
     "publish_date": "2026-12-04",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/fuel-trip-budget.svg"
   },
   {
     "slug": "bmi-limitations",
@@ -1078,7 +1096,8 @@
     "publish_date": "2026-12-11",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/bmi-limitations.svg"
   },
   {
     "slug": "measure-body-circumferences",
@@ -1135,7 +1154,8 @@
     "publish_date": "2026-12-18",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/measure-body-circumferences.svg"
   },
   {
     "slug": "maintenance-calories",
@@ -1192,7 +1212,8 @@
     "publish_date": "2026-12-25",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/maintenance-calories.svg"
   },
   {
     "slug": "hydration-needs-vary",
@@ -1249,7 +1270,8 @@
     "publish_date": "2027-01-01",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/hydration-needs-vary.svg"
   },
   {
     "slug": "ideal-weight-formulas",
@@ -1306,7 +1328,8 @@
     "publish_date": "2027-01-08",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/ideal-weight-formulas.svg"
   },
   {
     "slug": "inclusive-vs-exclusive-dates",
@@ -1362,7 +1385,8 @@
     "publish_date": "2027-01-15",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/inclusive-vs-exclusive-dates.svg"
   },
   {
     "slug": "age-calculation-leap-day",
@@ -1419,6 +1443,7 @@
     "publish_date": "2027-01-22",
     "status": "scheduled",
     "reviewer": "Yasser Chahir, Fynzo editor",
-    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice."
+    "disclaimer": "General educational information only. It is not medical, financial, tax, legal or investment advice.",
+    "card_image": "img/blog-covers/age-calculation-leap-day.svg"
   }
 ]

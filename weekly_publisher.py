@@ -51,6 +51,9 @@ def render_article(p):
     for value in (p['publish_date'],'9 min read','Reviewed by Yasser Chahir'):
         add_text(meta,'span',value)
     head.append(meta); article.append(head)
+    figure=soup.new_tag('figure'); figure['class']=['article-cover-svg']
+    cover=soup.new_tag('img',src=p.get('card_image',p['image']),alt=p['title']); cover['width']='1200'; cover['height']='630'; cover['loading']='eager'; cover['decoding']='async'
+    figure.append(cover); article.append(figure)
     add_text(article,'p',p['lead'],'article-lead')
     add_text(article,'h2','The key idea')
     add_text(article,'p',p['concept'])
@@ -106,7 +109,10 @@ def article_info(path):
     h=s.find('h1'); title=h.get_text(' ',strip=True) if h else path.stem
     cat=s.select_one('.post-cat, .bcat'); category=cat.get_text(' ',strip=True) if cat else 'Guide'
     desc=s.find('meta',attrs={'name':'description'}); description=desc.get('content','') if desc else ''
-    image=s.find('meta',attrs={'property':'og:image'}); image=(image.get('content','').split('/')[-1] if image else 'og-default.png')
+    cover=s.select_one('.article-cover-svg img')
+    if cover: image=cover.get('src','og-default.png')
+    else:
+        image_tag=s.find('meta',attrs={'property':'og:image'}); image=(image_tag.get('content','').split('/')[-1] if image_tag else 'og-default.png')
     schema=s.find('script',attrs={'type':'application/ld+json'}); published='2026-07-31'
     if schema:
         try: published=json.loads(schema.string or '{}').get('datePublished',published)
