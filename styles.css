@@ -70,7 +70,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 2
 .calc-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
 .act-btn{flex:1;min-width:110px;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 12px;border-radius:11px;border:1.5px solid var(--line);background:var(--card);color:var(--text);font-family:var(--font);font-weight:600;font-size:13px;cursor:pointer;transition:.2s}
 .act-btn:hover{border-color:var(--navy);background:var(--bg)}.act-btn svg{width:17px;height:17px}
-.ad{border:1px dashed var(--line);border-radius:14px;padding:20px;text-align:center;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#b6bac6;margin:10px 0}
+
 .prose{max-width:720px;margin:0 auto}
 .prose h2{font-size:clamp(24px,4vw,32px);font-weight:800;letter-spacing:-.5px;margin-bottom:14px}
 .prose h3{font-size:20px;font-weight:700;margin:28px 0 8px}
@@ -186,7 +186,7 @@ footer{background:var(--navy);color:#fff;padding:56px 0 30px;margin-top:40px}
 [data-theme="dark"] .doc,[data-theme="dark"] .calc-wrap,[data-theme="dark"] .post-card,[data-theme="dark"] .tool,[data-theme="dark"] .silo-card,[data-theme="dark"] .act-btn,[data-theme="dark"] .icon-btn,[data-theme="dark"] .lang-select{background:var(--card)}
 [data-theme="dark"] .article p,[data-theme="dark"] .article li{color:#c4ccdd}
 [data-theme="dark"] .article-table th{background:#0f1729}
-[data-theme="dark"] .ad{border-color:var(--line);color:#5c6478}
+[data-theme="dark"] 
 [data-theme="dark"] .silo{background:linear-gradient(180deg,var(--bg),#111a2e)}
 [data-theme="dark"] .silo-back a{color:#eef1f7}
 .moon{display:none}.sun{display:block}
