@@ -7,7 +7,7 @@
 # ============================================================
 
 POSTS = [
- dict(slug="pay-off-debt-fast", date="2026-08-01", cat="Debt", img="img/blog-loan.jpg",
+ dict(slug="pay-off-debt-fast", date="2026-08-01", cat="Debt", img="og-loan.svg",
   title="How to Pay Off Debt Fast: Avalanche vs Snowball (2026)",
   meta="Two proven methods to pay off debt fast — the avalanche (save most interest) and the snowball (stay motivated). Learn which fits you, with a free loan calculator.",
   lead="Debt feels heavier when you don't have a plan. Two simple methods — the avalanche and the snowball — turn a vague worry into a clear, finishable path.",
@@ -15,7 +15,7 @@ POSTS = [
   cta_href="loan-calculator.html", cta_label="Open the Loan Calculator",
   related=[("loan-calculator.html","Loan Calculator"),("blog-pay-off-loan-faster.html","Pay off a loan faster"),("savings-goal-calculator.html","Savings Goal")]),
 
- dict(slug="emergency-fund-how-much", date="2026-08-03", cat="Saving", img="img/blog-compound.jpg",
+ dict(slug="emergency-fund-how-much", date="2026-08-03", cat="Saving", img="og-compound.svg",
   title="Emergency Fund: How Much Do You Really Need? (2026)",
   meta="How big should your emergency fund be? Learn the 3–6 month rule, how to size it to your life, and how to build it fast with a free savings goal calculator.",
   lead="An emergency fund is the difference between a bad week and a financial crisis. Here's how much to keep — and how to build it without feeling squeezed.",
@@ -23,7 +23,7 @@ POSTS = [
   cta_href="savings-goal-calculator.html", cta_label="Open the Savings Goal Calculator",
   related=[("savings-goal-calculator.html","Savings Goal"),("compound-interest-calculator.html","Compound Interest"),("blog-compound-interest-explained.html","Compound interest explained")]),
 
- dict(slug="renting-vs-buying", date="2026-08-05", cat="Mortgages", img="img/blog-mortgage.jpg",
+ dict(slug="renting-vs-buying", date="2026-08-05", cat="Mortgages", img="og-mortgage.svg",
   title="Renting vs Buying a Home: How to Decide (2026)",
   meta="Should you rent or buy? Compare the real costs, the break-even point, and the lifestyle factors that matter — with a free mortgage calculator to run your numbers.",
   lead="\"Renting is throwing money away\" is a myth. Sometimes renting wins, sometimes buying does. The right answer is about your numbers and your timeline.",
@@ -31,7 +31,7 @@ POSTS = [
   cta_href="mortgage-calculator.html", cta_label="Open the Mortgage Calculator",
   related=[("mortgage-calculator.html","Mortgage Calculator"),("blog-how-much-house-can-i-afford.html","How much house can I afford"),("savings-goal-calculator.html","Savings Goal")]),
 
- dict(slug="what-is-a-good-credit-score", date="2026-08-07", cat="Finance", img="img/blog-loan.jpg",
+ dict(slug="what-is-a-good-credit-score", date="2026-08-07", cat="Finance", img="og-loan.svg",
   title="What Is a Good Credit Score and How to Improve It (2026)",
   meta="What counts as a good credit score, why it matters for loans and mortgages, and simple habits to improve yours over time.",
   lead="Your credit score quietly decides the interest rate you're offered — which can mean thousands saved or lost over a loan's life.",
@@ -39,7 +39,7 @@ POSTS = [
   cta_href="loan-calculator.html", cta_label="See how rates affect your loan",
   related=[("loan-calculator.html","Loan Calculator"),("mortgage-calculator.html","Mortgage Calculator"),("blog-pay-off-loan-faster.html","Pay off a loan faster")]),
 
- dict(slug="start-investing-small", date="2026-08-09", cat="Investing", img="img/blog-compound.jpg",
+ dict(slug="start-investing-small", date="2026-08-09", cat="Investing", img="og-compound.svg",
   title="How to Start Investing With Little Money (2026)",
   meta="You don't need thousands to start investing. Learn how small, regular amounts grow through compounding — with a free compound interest calculator.",
   lead="The biggest investing myth is that you need a lot of money to start. You don't. You need to start — and let time do the heavy lifting.",
@@ -47,7 +47,7 @@ POSTS = [
   cta_href="compound-interest-calculator.html", cta_label="Open the Compound Interest Calculator",
   related=[("compound-interest-calculator.html","Compound Interest"),("roi-calculator.html","ROI Calculator"),("blog-compound-interest-explained.html","Compound interest explained")]),
 
- dict(slug="50-30-20-budget", date="2026-08-11", cat="Budgeting", img="img/blog-compound.jpg",
+ dict(slug="50-30-20-budget", date="2026-08-11", cat="Budgeting", img="og-compound.svg",
   title="The 50/30/20 Budget Rule Explained (2026)",
   meta="The 50/30/20 rule is the simplest budget that works: 50% needs, 30% wants, 20% savings. Learn how to apply it with your take-home pay.",
   lead="Most budgets fail because they're too complicated. The 50/30/20 rule is simple enough to actually stick to.",
@@ -55,7 +55,7 @@ POSTS = [
   cta_href="income-tax-calculator.html", cta_label="Find your take-home pay",
   related=[("income-tax-calculator.html","Income Tax Calculator"),("savings-goal-calculator.html","Savings Goal"),("hourly-to-salary-calculator.html","Hourly to Salary")]),
 
- dict(slug="fixed-vs-variable-rates", date="2026-08-13", cat="Loans", img="img/blog-loan.jpg",
+ dict(slug="fixed-vs-variable-rates", date="2026-08-13", cat="Loans", img="og-loan.svg",
   title="Fixed vs Variable Interest Rates: Which Is Better? (2026)",
   meta="Fixed or variable rate? Learn the trade-off between certainty and potential savings, and how each affects your monthly loan payment.",
   lead="Choosing between a fixed and variable rate is really a choice between certainty and gamble. Here's how to decide.",
@@ -63,7 +63,7 @@ POSTS = [
   cta_href="loan-calculator.html", cta_label="Compare rates in the Loan Calculator",
   related=[("loan-calculator.html","Loan Calculator"),("mortgage-calculator.html","Mortgage Calculator"),("compound-interest-calculator.html","Compound Interest")]),
 
- dict(slug="save-for-down-payment", date="2026-08-15", cat="Saving", img="img/blog-mortgage.jpg",
+ dict(slug="save-for-down-payment", date="2026-08-15", cat="Saving", img="og-mortgage.svg",
   title="How to Save for a Down Payment (2026)",
   meta="A step-by-step plan to save for a house down payment — how much you need, where to keep it, and how to hit your target date.",
   lead="The down payment is the biggest hurdle to owning a home. With a target and a timeline, it becomes a countdown instead of a dream.",
@@ -71,7 +71,7 @@ POSTS = [
   cta_href="savings-goal-calculator.html", cta_label="Open the Savings Goal Calculator",
   related=[("savings-goal-calculator.html","Savings Goal"),("mortgage-calculator.html","Mortgage Calculator"),("blog-how-much-house-can-i-afford.html","How much house can I afford")]),
 
- dict(slug="simple-vs-compound-interest", date="2026-08-17", cat="Investing", img="img/blog-compound.jpg",
+ dict(slug="simple-vs-compound-interest", date="2026-08-17", cat="Investing", img="og-compound.svg",
   title="Simple vs Compound Interest: What's the Difference? (2026)",
   meta="Simple interest pays only on your principal; compound interest pays on principal plus past interest. See why the difference is huge over time.",
   lead="Simple and compound interest sound similar but behave completely differently — and the gap between them grows every single year.",
@@ -79,7 +79,7 @@ POSTS = [
   cta_href="compound-interest-calculator.html", cta_label="Open the Compound Interest Calculator",
   related=[("compound-interest-calculator.html","Compound Interest"),("savings-goal-calculator.html","Savings Goal"),("blog-compound-interest-explained.html","Compound interest explained")]),
 
- dict(slug="understand-take-home-pay", date="2026-08-19", cat="Income", img="img/blog-loan.jpg",
+ dict(slug="understand-take-home-pay", date="2026-08-19", cat="Income", img="og-loan.svg",
   title="Understanding Your Take-Home Pay (2026)",
   meta="Gross vs net pay explained. Learn what's deducted from your salary and how to estimate your real take-home pay with a free calculator.",
   lead="Your salary and the amount that actually lands in your account are two different numbers. Knowing the gap is the first step to budgeting well.",
@@ -159,7 +159,7 @@ POSTS = [
   cta_href="body-fat-calculator.html", cta_label="Open the Body Fat Calculator",
   related=[("bmi-calculator.html","BMI Calculator"),("body-fat-calculator.html","Body Fat Calculator"),("calorie-calculator.html","Calorie Calculator")]),
 
- dict(slug="roi-explained-beginners", date="2026-09-08", cat="Investing", img="img/blog-compound.jpg",
+ dict(slug="roi-explained-beginners", date="2026-09-08", cat="Investing", img="og-compound.svg",
   title="ROI Explained: How to Measure Any Investment (2026)",
   meta="Return on investment (ROI) in plain English: the formula, what it misses, and how to use it to compare opportunities — with a free ROI calculator.",
   lead="ROI is the simplest way to answer 'was this worth it?' — for a stock, a course, or a side hustle. Here's how to use it well.",
@@ -167,7 +167,7 @@ POSTS = [
   cta_href="roi-calculator.html", cta_label="Open the ROI Calculator",
   related=[("roi-calculator.html","ROI Calculator"),("compound-interest-calculator.html","Compound Interest"),("blog-compound-interest-explained.html","Compound interest explained")]),
 
- dict(slug="hourly-to-salary-guide", date="2026-09-10", cat="Income", img="img/blog-loan.jpg",
+ dict(slug="hourly-to-salary-guide", date="2026-09-10", cat="Income", img="og-loan.svg",
   title="Hourly to Salary: How to Know Your Real Yearly Income (2026)",
   meta="Convert an hourly wage into a yearly salary and understand what a job really pays. Includes a free hourly-to-salary calculator.",
   lead="Comparing an hourly job to a salaried one is hard until both are in the same units. Here's how to convert — and what to watch for.",
