@@ -57,7 +57,7 @@ git add -A && git commit -m "Fynzo: design premium + SEO max" && git push
 ## ⚙️ حوايج تبدّل بيدك قبل ما تكون max (مهمين)
 
 1. **og-default.svg** → دير نسخة **PNG 1200×630** (`og-default.png`) حيت بعض platforms (WhatsApp/FB) ما كيبانش فيهم SVG. من بعد بدّل `DEFAULT_OG = "/og-default.png"` فوق فالسكريبت وعاود شغّلو.
-2. **hello@fynzo.me** → بدّلو بالإيميل الحقيقي فـ كل الصفحات (find & replace).
+2. **chahiryasser12@gmail.com** → بدّلو بالإيميل الحقيقي فـ كل الصفحات (find & replace).
 3. **Formspree** فـ `contact.html` → حط endpoint الحقيقي.
 4. **GA4** (`G-D7NJ4T2ZK4`) → إلا بغيتي property ديالك، بدّلو.
 

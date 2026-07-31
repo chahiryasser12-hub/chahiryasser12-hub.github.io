@@ -91,7 +91,7 @@ Links + brand mentions still matter — and now feed AI citations too. Do these:
 ## 🚀 90-DAY PLAN
 
 **Weeks 1–2 (setup):** Search Console + submit sitemap + request indexing of top 5 pages.
-Add 404.html, ads.txt, security/perf tweaks from this kit. Replace `hello@fynzo.me` with your email.
+Add 404.html, ads.txt, security/perf tweaks from this kit. Replace `chahiryasser12@gmail.com` with your email.
 
 **Weeks 3–6 (content):** Publish 2–3 blog posts/week (you have an auto-publisher — keep it!).
 Make sure each calculator keeps its 300–500 words. Add "Last updated" dates.

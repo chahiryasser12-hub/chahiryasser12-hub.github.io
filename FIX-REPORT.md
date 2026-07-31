@@ -26,8 +26,8 @@ These do not break the website, but can be removed from production deployment:
 - `seo-autofix.py` after reviewing and committing its changes
 
 ## Manual values still required
-- Replace `hello@fynzo.me` with the real contact email.
-- Replace `formspree.io/f/YOUR_FORM_ID` with the real Formspree endpoint.
+- Replace `chahiryasser12@gmail.com` with the real contact email.
+- Replace `formspree.io/f/configured Formspree form ID` with the real Formspree endpoint.
 - Add a valid `ads.txt` only after AdSense approval.
 
 ## Full-site language switching

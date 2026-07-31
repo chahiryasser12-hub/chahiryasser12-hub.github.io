@@ -12,8 +12,8 @@ You only **ADD** or **tweak** a few files. Do these in GitHub directly (Add file
   ChatGPT / Perplexity / Google AI Overviews can cite you — a real 2026 ranking edge).
 
 ## 2) TWO tiny edits (find & replace across all files in a code editor)
-- `hello@fynzo.me` → your real email.
-- In `contact.html`: `formspree.io/f/YOUR_FORM_ID` → your real Formspree endpoint
+- `chahiryasser12@gmail.com` → your real email.
+- In `contact.html`: `formspree.io/f/configured Formspree form ID` → your real Formspree endpoint
   (free at formspree.io) so the contact form actually sends.
 
 ## 3) The ONE bug fix (language switcher going back to EN)
