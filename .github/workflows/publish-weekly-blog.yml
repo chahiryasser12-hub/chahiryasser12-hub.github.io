@@ -1,0 +1,54 @@
+name: Publish one weekly Fynzo article
+
+on:
+  schedule:
+    - cron: "0 8 * * 5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-fynzo-blog
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install publisher dependency
+        run: python -m pip install beautifulsoup4
+      - name: Publish at most one due article
+        run: python weekly_publisher.py
+      - name: Verify local links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from bs4 import BeautifulSoup
+          missing=[]
+          for page in Path('.').glob('*.html'):
+              soup=BeautifulSoup(page.read_text(errors='ignore'),'html.parser')
+              for a in soup.find_all('a',href=True):
+                  href=a['href'].split('#')[0].split('?')[0]
+                  if not href or href.startswith(('http://','https://','mailto:','tel:','#')): continue
+                  if not Path(href.lstrip('/')).exists(): missing.append((page.name,href))
+          if missing: raise SystemExit('Broken links: '+repr(missing))
+          print('Local links OK')
+          PY
+      - name: Commit published article
+        run: |
+          if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
+            echo "No article due this week."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog-*.html blog.html sitemap.xml
+          git commit -m "Publish weekly Fynzo article"
+          git push
