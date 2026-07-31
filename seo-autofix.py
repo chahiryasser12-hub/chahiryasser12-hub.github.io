@@ -31,7 +31,7 @@ import os, re, sys
 DOMAIN     = "https://fynzo.me"          # <-- change if your domain changes
 DEFAULT_OG = "/og-default.svg"           # fallback share image (1200x630 ideally: use .png)
 BRAND      = "Fynzo"
-LANGS      = ["fr", "ar"]                 # sub-folder languages that mirror the root (EN)
+LANGS      = []                 # sub-folder languages that mirror the root (EN)
 MARK       = "<!-- fynzo-seo v1 -->"      # idempotency marker
 # ---------------------------------------------------------------
 
