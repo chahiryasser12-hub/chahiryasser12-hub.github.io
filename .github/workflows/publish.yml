@@ -2,8 +2,7 @@ name: Auto-publish blog posts
 
 # Runs every day at 08:00 UTC (09:00 Morocco). Also runnable manually.
 on:
-  schedule:
-    - cron: '0 8 * * *'
+  
   workflow_dispatch:   # lets you run it by hand from the Actions tab
 
 permissions:
