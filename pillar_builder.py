@@ -172,7 +172,7 @@ def choose_pillar(filename, text=""):
 
 
 def inject_backlink(path):
-    if path.name in PILLARS or path.name in ("index.html","blog.html","404.html"): return
+    if path.name in PILLARS or path.name in ("index.html","blog.html","404.html","offline.html"): return
     text = path.read_text(encoding="utf-8", errors="ignore")
     if 'data-pillar-link="true"' in text: return
     pillar = choose_pillar(path.name, re.sub(r"<[^>]+>", " ", text)[:5000])

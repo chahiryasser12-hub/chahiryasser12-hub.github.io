@@ -1,0 +1,7 @@
+Audited 71 HTML files; 0 errors; 0 warnings.
+Quality gate: 71 HTML files, 0 errors.
+
+Full future publishing pipeline: PASS
+New calculators: 4
+New supporting guides: 5
+Generated: August 1, 2026

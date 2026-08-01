@@ -1,0 +1,9 @@
+Audited 71 HTML files; 0 errors; 0 warnings.
+Quality gate: 71 HTML files, 0 errors.
+Formula tests: 11 checks passed.
+Opportunity tests: 4 checks passed.
+
+New calculator design checks: PASS (4/4)
+New guide design checks: PASS (5/5)
+Future publishing pipeline: PASS
+Generated: August 1, 2026

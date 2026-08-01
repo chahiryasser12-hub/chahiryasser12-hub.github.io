@@ -170,3 +170,13 @@
     enableFeedback();
   });
 })();
+
+/* SEO stages 11-20: privacy-safe analytics and accessible FAQ controls. */
+(function(){"use strict";
+function track(name,data){if(typeof window.gtag!=="function")return;var payload={page_path:location.pathname};if(data)Object.keys(data).forEach(function(k){payload[k]=data[k];});window.gtag("event",name,payload);}
+document.addEventListener("DOMContentLoaded",function(){
+  function toggleFaq(q){var item=q.closest(".faq-item");if(!item)return;var open=item.classList.toggle("open");q.setAttribute("aria-expanded",open?"true":"false");var icon=q.querySelector("span");if(icon)icon.textContent=open?"−":"+";}document.addEventListener("click",function(e){var q=e.target.closest&&e.target.closest(".faq-q");if(!q)return;e.preventDefault();toggleFaq(q);});document.addEventListener("keydown",function(e){var q=e.target.closest&&e.target.closest(".faq-q");if(!q||(e.key!=="Enter"&&e.key!==" "))return;e.preventDefault();toggleFaq(q);});
+  document.querySelectorAll("form").forEach(function(form){form.addEventListener("submit",function(){track("contact_submit",{form_name:form.getAttribute("aria-label")||form.id||"form"});});});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a||!a.href||a.origin!==location.origin)return;if(location.pathname.indexOf("blog-")!==-1&&/calculator|converter|generator|estimator/.test(a.pathname))track("article_to_calculator",{destination_path:a.pathname});var vote=e.target.closest&&e.target.closest("[data-vote]");if(vote)track("helpful_vote",{vote:vote.getAttribute("data-vote")});});
+});
+})();

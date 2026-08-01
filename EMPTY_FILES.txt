@@ -1,0 +1,13 @@
+These files are intentionally empty because GitHub web editing makes deletion inconvenient.
+They are obsolete and must not be restored or executed:
+
+.github/workflows/.txt
+publish.py
+posts_data.py
+add_16_calculators.py
+calculator_content_upgrade.py
+cleanup_duplicate_content.py
+long_tail_upgrade.py
+seo-autofix.py
+seo_titles_upgrade.py
+new-tools-enhancements.js

@@ -11,7 +11,7 @@ var params=new URLSearchParams(location.search);document.querySelectorAll('#fx [
 var copy=document.getElementById('cr');if(copy)copy.onclick=function(){navigator.clipboard.writeText(resultText());flash(copy,'Copied');};
 var link=document.getElementById('cl');if(link)link.onclick=function(){navigator.clipboard.writeText(location.href.split('?')[0]+'?'+new URLSearchParams(fields()).toString());flash(link,'Link copied');};
 var downloadBtn=document.getElementById('dl');if(downloadBtn)downloadBtn.onclick=function(event){event.preventDefault();download(resultText(),'text/plain;charset=utf-8','txt');flash(downloadBtn,'Downloaded');};
-var printBtn=document.getElementById('pr');if(printBtn)printBtn.onclick=function(){
+var printBtn=document.getElementById('pr');if(printBtn)printBtn.onclick=function(){if(typeof window.gtag==='function')window.gtag('event','print_pdf',{page_path:location.pathname,calculator_name:(document.querySelector('h1')||{}).textContent||location.pathname});
   var title=document.querySelector('h1')?document.querySelector('h1').textContent.trim():'Fynzo Calculation';
   var description=document.querySelector('.page-head .updated')?document.querySelector('.page-head .updated').textContent.trim():'';
   var inputs=fieldRows(),results=resultRows(),now=new Date();
