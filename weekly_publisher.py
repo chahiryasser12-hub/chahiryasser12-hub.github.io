@@ -144,7 +144,7 @@ def rebuild_sitemap():
         robots=s.find('meta',attrs={'name':'robots'})
         if robots and 'noindex' in robots.get('content','').lower(): continue
         loc=DOMAIN if p.name=='index.html' else DOMAIN+p.name
-        last='2026-07-31'
+        last=date.today().isoformat()
         if p.name.startswith('blog-'):
             info=article_info(p); last=info['date']
         pr='1.0' if p.name=='index.html' else ('0.8' if p.name.endswith(('calculator.html','converter.html')) or p.name=='password-generator.html' else '0.6')
