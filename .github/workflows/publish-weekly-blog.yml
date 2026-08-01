@@ -18,39 +18,94 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install publisher dependency
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
         run: python -m pip install beautifulsoup4
+
+      - name: Validate Python and JavaScript syntax
+        run: |
+          python -m py_compile weekly_publisher.py pillar_builder.py seo_first_10.py seo_next_10.py seo_final_10.py search_visibility_upgrade.py build_opportunity_pages.py build_opportunity_guides.py integrate_opportunities.py build_seo_calculators.py integrate_seo_calculators.py improve_seo_calculator_cards.py improve_focused_section.py add_guide_artwork.py unify_new_pages.py integrate_result_insights.py integrate_visual_results.py result_insights_tests.py visual_results_tests.py formula_tests.py faq_tests.py interaction_tests.py optimize_site_ui.py ui_consistency_tests.py seo_launch_gate.py audit_site.py quality_gate.py
+          for file in *.js; do
+            [ -s "$file" ] && node --check "$file"
+          done
+
       - name: Publish at most one due article
         run: python weekly_publisher.py
-      - name: Refresh pillar pages and links
+
+      - name: Refresh topic hubs and internal links
         run: python pillar_builder.py
-      - name: Verify local links
+
+      - name: Build high-intent opportunity pages
         run: |
-          python - <<'PY'
-          from pathlib import Path
-          from bs4 import BeautifulSoup
-          missing=[]
-          for page in Path('.').glob('*.html'):
-              soup=BeautifulSoup(page.read_text(errors='ignore'),'html.parser')
-              for a in soup.find_all('a',href=True):
-                  href=a['href'].split('#')[0].split('?')[0]
-                  if not href or href.startswith(('http://','https://','mailto:','tel:','#')): continue
-                  if not Path(href.lstrip('/')).exists(): missing.append((page.name,href))
-          if missing: raise SystemExit('Broken links: '+repr(missing))
-          print('Local links OK')
-          PY
-      - name: Commit published article
+          python build_opportunity_pages.py
+          python build_opportunity_guides.py
+          python integrate_opportunities.py
+          python build_seo_calculators.py
+          python integrate_seo_calculators.py
+          python improve_seo_calculator_cards.py
+          python improve_focused_section.py
+          python add_guide_artwork.py
+          python unify_new_pages.py
+          python integrate_result_insights.py
+          python integrate_visual_results.py
+          python weekly_publisher.py --rebuild-only
+
+      - name: Normalize the first 10 SEO layers
+        run: python seo_first_10.py
+
+      - name: Apply SEO stages 11 through 20
+        run: python seo_next_10.py
+
+      - name: Apply final SEO trust and cleanup stages
+        run: python seo_final_10.py
+
+      - name: Add static search examples
+        run: python search_visibility_upgrade.py
+
+      - name: Test result interpretations
+        run: python result_insights_tests.py
+
+      - name: Test tailored result visuals
+        run: python visual_results_tests.py
+
+      - name: Test calculator formulas
+        run: python formula_tests.py
+
+      - name: Test FAQ interactions
+        run: python faq_tests.py
+
+      - name: Test page scrolling and catalog interactions
+        run: python interaction_tests.py
+
+      - name: Test unified UI and catalog
+        run: python ui_consistency_tests.py
+
+      - name: Run SEO launch gate
+        run: python seo_launch_gate.py
+
+      - name: Run complete site audit
+        run: |
+          python audit_site.py
+          python quality_gate.py
+
+      - name: Commit generated updates
         run: |
           if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
-            echo "No article due this week."
+            echo "No article due and no generated changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add blog-*.html blog.html sitemap.xml
-          git commit -m "Publish weekly Fynzo article"
+          git add -A
+          git commit -m "Publish and validate weekly Fynzo update"
           git push
