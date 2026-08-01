@@ -1,30 +1,44 @@
-Only the new professional no-popup Save PDF implementation is enabled on these 28 tools:
+# PDF report coverage
 
-mortgage-calculator.html
-loan-calculator.html
-compound-interest-calculator.html
-savings-goal-calculator.html
-income-tax-calculator.html
-roi-calculator.html
-hourly-to-salary-calculator.html
-bmi-calculator.html
-calorie-calculator.html
-body-fat-calculator.html
-ideal-weight-calculator.html
-water-intake-calculator.html
-debt-payoff-calculator.html
-extra-mortgage-payment-calculator.html
-apr-calculator.html
-emergency-fund-calculator.html
-budget-percentage-calculator.html
-savings-interest-calculator.html
-rent-vs-buy-calculator.html
-debt-to-income-calculator.html
-price-per-unit-calculator.html
-markup-margin-calculator.html
-grade-percentage-calculator.html
-time-duration-calculator.html
-business-days-calculator.html
-pace-calculator.html
-waist-to-height-ratio-calculator.html
-protein-intake-estimator.html
+The professional Save PDF implementation is enabled on all 40 catalog tools.
+
+- mortgage-calculator.html
+- loan-calculator.html
+- compound-interest-calculator.html
+- savings-goal-calculator.html
+- income-tax-calculator.html
+- roi-calculator.html
+- hourly-to-salary-calculator.html
+- bmi-calculator.html
+- calorie-calculator.html
+- body-fat-calculator.html
+- ideal-weight-calculator.html
+- water-intake-calculator.html
+- debt-payoff-calculator.html
+- extra-mortgage-payment-calculator.html
+- apr-calculator.html
+- emergency-fund-calculator.html
+- budget-percentage-calculator.html
+- savings-interest-calculator.html
+- rent-vs-buy-calculator.html
+- debt-to-income-calculator.html
+- price-per-unit-calculator.html
+- markup-margin-calculator.html
+- grade-percentage-calculator.html
+- time-duration-calculator.html
+- business-days-calculator.html
+- pace-calculator.html
+- waist-to-height-ratio-calculator.html
+- protein-intake-estimator.html
+- mortgage-total-cost-calculator.html
+- mortgage-recast-calculator.html
+- pay-raise-calculator.html
+- work-hours-calculator.html
+- auto-loan-calculator.html
+- credit-card-payoff-calculator.html
+- retirement-savings-calculator.html
+- home-affordability-calculator.html
+- loan-comparison-calculator.html
+- net-worth-calculator.html
+- break-even-calculator.html
+- gpa-calculator.html
