@@ -237,7 +237,7 @@ footer{background:var(--navy);color:#fff;padding:56px 0 30px;margin-top:40px}
 .result-next[data-smart-next="true"]{align-items:stretch}.result-next[data-smart-next="true"]>strong{width:100%;margin-bottom:2px}.result-next[data-smart-next="true"] a{display:flex;flex-direction:column;align-items:flex-start;border-radius:12px;max-width:220px;padding:9px 12px}.result-next[data-smart-next="true"] a small{display:block;color:var(--muted);font-size:10px;line-height:1.35;margin-top:3px;font-weight:500}
 
 /* Mobile performance */
-@supports (content-visibility:auto){#tools,.popular-tools,.personal-tools,#guide,#faq,footer,.silo,.advanced-tools,.content{content-visibility:auto;contain-intrinsic-size:1px 800px}}
+
 .personal-tools.is-empty{display:none}
 
 /* Fynzo pillar pages */
@@ -410,3 +410,32 @@ html[data-fynzo-ui="unified-v9"] .guide-hero-art{margin-top:8px}
 
 /* v23 tailored visual results, CSS and SVG only */
 .result-chart.fynzo-visual-ready{display:block;min-height:160px;padding:4px 0}.viz-bars{display:grid;gap:14px}.viz-row>div{display:flex;justify-content:space-between;gap:12px;font-size:13px}.viz-row span{color:var(--muted)}.viz-row strong{color:var(--text);text-align:right}.viz-row>p{height:12px;margin:7px 0 0;background:rgba(154,163,186,.18);border-radius:99px;overflow:hidden}.viz-row>p i{display:block;height:100%;min-width:4px;border-radius:99px;transition:width .3s ease}.viz-gauge{text-align:center;padding:22px 5px 4px}.viz-gauge>strong{display:block;font-size:30px;line-height:1;color:var(--text)}.viz-gauge>span{display:block;margin:6px 0 22px;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.viz-scale{position:relative;display:flex;height:18px;border-radius:99px}.viz-scale i:first-child{border-radius:99px 0 0 99px}.viz-scale i:last-of-type{border-radius:0 99px 99px 0}.viz-scale b{position:absolute;top:50%;width:5px;height:31px;background:var(--text);border:3px solid var(--card);border-radius:5px;transform:translate(-50%,-50%);box-shadow:0 2px 8px rgba(11,16,32,.24);transition:left .3s ease}.viz-gauge small{display:flex;justify-content:space-between;margin-top:7px;color:var(--muted)}.viz-gauge em{font-style:normal}.viz-donut-wrap{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center}.viz-donut-wrap svg{width:145px;height:145px;transform:rotate(-90deg)}.viz-donut-wrap>div{display:grid;gap:10px}.viz-donut-wrap p{display:grid;grid-template-columns:10px 1fr auto;gap:9px;align-items:center;margin:0;font-size:13px}.viz-donut-wrap p i{width:10px;height:10px;border-radius:50%}.viz-donut-wrap p span{color:var(--muted)}.viz-donut-wrap p strong{color:var(--text)}@media(max-width:560px){.viz-donut-wrap{grid-template-columns:1fr}.viz-donut-wrap svg{margin:auto}}@media(prefers-reduced-motion:reduce){.viz-row>p i,.viz-scale b{transition:none}}
+
+/* Lighthouse 90+ stability patch */
+html{scroll-behavior:auto}
+.hero-img{aspect-ratio:640/520;min-height:0;contain:layout paint}
+.hero-img img{display:block;width:100%;height:100%;object-fit:contain;aspect-ratio:640/520}
+/* Keep the two-row catalog height stable while icons decode. */
+#grid.tools-grid[data-horizontal-catalog="true"]{grid-template-rows:repeat(2,250px);min-height:527px;contain:layout paint style}
+#grid[data-horizontal-catalog="true"] .tool{height:250px;overflow:hidden}
+#grid[data-horizontal-catalog="true"] .tool .ic{flex:0 0 50px}
+#grid[data-horizontal-catalog="true"] .tool .ic img{display:block;width:34px;height:34px}
+/* Reserve calculator output space before JavaScript writes results. */
+#res,.result,.result-panel{min-height:180px;contain:layout paint}
+.result-chart{min-height:160px;contain:layout paint}
+/* Transitions must not animate layout properties. */
+.faq-a{transition:none}
+.faq-q span{transition:transform .2s ease}
+.hero-img{transition:transform .2s ease}
+.viz-row>p i,.viz-scale b{transition:none!important}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-img{width:min(640px,100%);margin-inline:auto}
+}
+@media(max-width:700px){
+  #grid.tools-grid[data-horizontal-catalog="true"]{grid-template-rows:repeat(2,235px);grid-auto-columns:minmax(82%,82%);min-height:497px}
+  #grid[data-horizontal-catalog="true"] .tool{height:235px;padding:18px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}

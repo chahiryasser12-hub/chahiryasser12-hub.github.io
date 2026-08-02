@@ -1,5 +1,5 @@
 /* Fynzo Service Worker: resilient offline shell with fresh HTML. */
-const CACHE_VERSION="fynzo-production-v23-20260801";
+const CACHE_VERSION="fynzo-production-v24-20260802";
 const STATIC_CACHE=CACHE_VERSION+"-static";
 const PAGE_CACHE=CACHE_VERSION+"-pages";
 const OFFLINE_URL="/offline.html";
