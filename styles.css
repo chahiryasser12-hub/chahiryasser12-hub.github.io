@@ -220,6 +220,13 @@ footer{background:var(--navy);color:#fff;padding:56px 0 30px;margin-top:40px}
 [data-theme="dark"] .result-context,[data-theme="dark"] .helpful-actions button{background:#0f1729}
 [data-theme="dark"] .popular-tools{background:linear-gradient(180deg,var(--card),var(--bg))}
 
+@supports (content-visibility:auto) {
+.sec,.tools-grid>.tool:nth-child(n+9),.blog-grid>.post-card:nth-child(n+5),.silo-grid>.silo-card:nth-child(n+5),.faq-item,.featured,.pillar-card,.guide-result-grid a,.doc,.article,.complete-calculator-content,.calculator-supplement,footer{content-visibility:auto;contain-intrinsic-size:260px 220px}
+.faq-item{contain-intrinsic-size:88px}
+.featured{contain-intrinsic-size:420px 320px}
+footer{contain-intrinsic-size:320px 320px}
+}
+
 /* Advanced calculator features */
 .favorite-tool-btn{margin-top:16px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:100px;padding:9px 15px;font:700 13px var(--font);cursor:pointer}.favorite-tool-btn[aria-pressed="true"]{border-color:var(--gold);color:#8b681f;background:rgba(200,164,92,.12)}
 .advanced-tools{padding-top:34px}.advanced-grid{display:grid;gap:18px;max-width:940px;margin:0 auto}.advanced-card,.personal-card,.result-chart-card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:22px;box-shadow:0 8px 24px -18px rgba(11,16,32,.28)}
