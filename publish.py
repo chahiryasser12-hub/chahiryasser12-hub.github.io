@@ -7,6 +7,7 @@ Fynzo auto-publisher. Run by GitHub Action daily (and works manually).
 Idempotent: safe to run every day.
 """
 import os, datetime
+import json
 from posts_data import POSTS
 
 GAID="G-D7NJ4T2ZK4"
@@ -15,7 +16,7 @@ TODAY=datetime.date.today()
 BRAND='<svg viewBox="0 0 64 64" fill="none"><rect x="6" y="6" width="52" height="52" rx="13" fill="#0b1020"/><rect x="15" y="14" width="34" height="10" rx="3.5" fill="#c8a45c"/><circle cx="21" cy="35" r="3.6" fill="#f7f8fa"/><circle cx="32" cy="35" r="3.6" fill="#f7f8fa"/><circle cx="21" cy="46" r="3.6" fill="#f7f8fa"/><path d="M28 49 L36 41 L42 46 L52 34" stroke="#c8a45c" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M47 33 L53 34 L52 40 Z" fill="#c8a45c"/><circle cx="43" cy="46" r="4" fill="#1f8a70"/></svg>'
 FBRAND='<svg viewBox="0 0 220 64" fill="none"><rect x="4" y="8" width="40" height="48" rx="9" fill="#1a2340"/><rect x="10" y="14" width="28" height="9" rx="3" fill="#c8a45c"/><circle cx="15" cy="33" r="3.2" fill="#fff"/><circle cx="24" cy="33" r="3.2" fill="#fff"/><circle cx="15" cy="43" r="3.2" fill="#fff"/><circle cx="24" cy="43" r="3.2" fill="#fff"/><path d="M30 48 L36 42 L40 46 L48 36" stroke="#c8a45c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 34 L49 35 L48 40 Z" fill="#c8a45c"/><text x="60" y="42" font-family="Inter,sans-serif" font-size="30" font-weight="800"><tspan fill="#fff">Fynz</tspan><tspan fill="#c8a45c">o</tspan></text></svg>'
 GA='<script async src="https://www.googletagmanager.com/gtag/js?id='+GAID+'"></script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","'+GAID+'");</script>'
-HL='<link rel="alternate" hreflang="en" href="https://fynzo.me/{s}"/><link rel="alternate" hreflang="fr" href="https://fynzo.me/{s}"/><link rel="alternate" hreflang="ar" href="https://fynzo.me/{s}"/><link rel="alternate" hreflang="x-default" href="https://fynzo.me/{s}"/>'
+HL='<link rel="alternate" hreflang="en" href="https://fynzo.me/{s}"/><link rel="alternate" hreflang="x-default" href="https://fynzo.me/{s}"/>'
 NAV=('<header><nav><a class="brand" href="index.html">'+BRAND+'Fynzo</a><div class="nav-links">'
 '<a href="index.html#tools">Calculators</a><a href="blog.html" style="color:var(--text)">Blog</a>'
 '<a href="about.html">About</a><a href="contact.html">Contact</a>'
@@ -27,25 +28,39 @@ FOOTER=('<footer><div class="wrap"><div class="foot"><div class="foot-brand">'+F
 '<div class="foot-bottom">&copy; 2026 Fynzo &middot; fynzo.me &middot; All calculators are educational estimates only.</div></div></footer>')
 TAIL='<script defer src="fynzo.js"></script></body></html>'
 
+def ld(*objs):
+    return ''.join('<script type="application/ld+json">\n'+json.dumps(obj, ensure_ascii=False, separators=(',', ':'))+'\n</script>' for obj in objs if obj)
+
 def head(t,d,slug,img,schema):
+    # preload a WebP version of the page hero when available to improve LCP
+    webp = img.rsplit('.',1)[0] + '.webp' if '.' in img else ''
+    preload = f'<link rel="preload" as="image" href="https://fynzo.me/{webp}">' if webp and os.path.exists(webp) else ''
     return ('<!DOCTYPE html>\n<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">'
     f'<title>{t}</title><meta name="description" content="{d}"><meta name="robots" content="index, follow, max-image-preview:large">'
     f'<link rel="canonical" href="https://fynzo.me/{slug}">'+HL.format(s=slug)+
     '<link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="mask-icon" href="favicon.svg" color="#0b1020"><link rel="apple-touch-icon" href="favicon.svg"><link rel="manifest" href="site.webmanifest"><meta name="theme-color" content="#0b1020">'
-    f'<meta property="og:type" content="article"><meta property="og:title" content="{t}"><meta property="og:description" content="{d}"><meta property="og:url" content="https://fynzo.me/{slug}"><meta property="og:image" content="https://fynzo.me/{img}"><meta name="twitter:card" content="summary_large_image">'
+    f'<meta property="og:type" content="article"><meta property="og:title" content="{t}"><meta property="og:description" content="{d}"><meta property="og:url" content="https://fynzo.me/{slug}"><meta property="og:image" content="https://fynzo.me/{img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">'
     +GA+'<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">'
-    f'\n<script type="application/ld+json">\n{schema}\n</script>\n</head><body>')
+    f'\n{preload}\n{schema}\n</head><body>')
 
 def build_post(p):
     slug="blog-"+p["slug"]+".html"
     d=datetime.date.fromisoformat(p["date"])
-    disp=d.strftime("%-d %B %Y") if hasattr(d,'strftime') else p["date"]
-    schema='{"@context":"https://schema.org","@type":"Article","headline":"%s","image":"https://fynzo.me/%s","description":"%s","author":{"@type":"Organization","name":"Fynzo"},"publisher":{"@type":"Organization","name":"Fynzo"},"datePublished":"%s"}'%(p["title"].replace('"',"'"),p["img"],p["meta"].replace('"',"'"),p["date"])
+    disp=f"{d.day} {d.strftime('%B %Y')}" if hasattr(d,'strftime') else p["date"]
+    schema=ld(
+        {"@context":"https://schema.org","@type":"Article","headline":p["title"].replace('"',"'"),"image":"https://fynzo.me/"+p["img"],"description":p["meta"].replace('"',"'"),"author":{"@type":"Person","name":"Yasser Chahir"},"publisher":{"@type":"Organization","name":"Fynzo","url":"https://fynzo.me/","logo":{"@type":"ImageObject","url":"https://fynzo.me/logo-icon.svg"}},"datePublished":p["date"],"dateModified":str(TODAY),"mainEntityOfPage":"https://fynzo.me/"+slug,"inLanguage":"en","isAccessibleForFree":True},
+        {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fynzo.me/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://fynzo.me/blog.html"},{"@type":"ListItem","position":3,"name":p["title"].split(" (2026")[0].split(" (20")[0],"item":"https://fynzo.me/"+slug}]}
+    )
     rel="".join('<a href="%s">%s</a>'%(u,t) for u,t in p["related"])
     html=head(p["title"],p["meta"],slug,p["img"],schema)+NAV
     html+='<article class="article"><div class="crumb"><a href="blog.html">&larr; Blog</a> &middot; '+p["cat"]+'</div>'
     html+='<div class="article-head"><div class="post-cat">'+p["cat"]+'</div><h1>'+p["title"].split(" (2026")[0].split(" (20")[0]+'</h1><div class="meta"><span>&#128197; '+disp+'</span><span>By Fynzo</span></div></div>'
-    html+='<img class="article-hero" src="'+p["img"]+'" alt="'+p["cat"]+'" width="1200" height="500" style="width:100%;height:auto;border-radius:18px;margin-bottom:28px">'
+    orig = p["img"]
+    webp = orig.rsplit('.',1)[0]+'.webp' if '.' in orig else orig
+    html += '<picture>'
+    html += '<source type="image/webp" srcset="'+webp+'">'
+    html += '<img class="article-hero" src="'+orig+'" alt="'+p["cat"]+'" width="1200" height="500" style="width:100%;height:auto;border-radius:18px;margin-bottom:28px">'
+    html += '</picture>'
     html+='<p class="article-lead">'+p["lead"]+'</p>'+p["body"]
     html+='<div class="cta-box"><h3>Try it yourself</h3><p>Run your own numbers in seconds — free, no sign-up.</p><a href="'+p["cta_href"]+'" class="btn">'+p["cta_label"]+' &rarr;</a></div>'
     html+='<div class="callout"><p>&#9888; <strong>Remember:</strong> this is general educational information, not professional advice. See our <a href="disclaimer.html">disclaimer</a>.</p></div>'
@@ -71,7 +86,8 @@ def head_simple(t,d,slug):
     f'<title>{t}</title><meta name="description" content="{d}"><meta name="robots" content="index, follow, max-image-preview:large">'
     f'<link rel="canonical" href="https://fynzo.me/{slug}">'+HL.format(s=slug)+
     '<link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="mask-icon" href="favicon.svg" color="#0b1020"><link rel="apple-touch-icon" href="favicon.svg"><link rel="manifest" href="site.webmanifest"><meta name="theme-color" content="#0b1020">'
-    +GA+'<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body>')
+    +GA+'<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">'
+    f'<script type="application/ld+json">\n{json.dumps({"@context":"https://schema.org","@type":"WebPage","name":t,"description":d,"url":"https://fynzo.me/"+slug,"isPartOf":{"@type":"WebSite","name":"Fynzo","url":"https://fynzo.me/"}} , ensure_ascii=False, separators=(",", ":"))}\n</script></head><body>')
 
 def rebuild_blog(published):
     # featured = newest published (from POSTS) or first original
@@ -84,8 +100,8 @@ def rebuild_blog(published):
         items.append(o)
     # featured = first item
     feat=items[0] if items else None
-    body=head_simple("Fynzo Blog — Money & Health Guides You Can Use","Practical, jargon-free guides on mortgages, loans, saving, investing and health, updated regularly.","blog.html")+NAV
-    body+='<div class="page-head"><div class="wrap"><div class="eyebrow">The Fynzo Blog</div><h1>Money &amp; health, made simple.</h1><p class="updated">Practical guides — no jargon, just the numbers that matter. New posts every few days.</p></div></div>'
+    body=head_simple("Fynzo Blog - Money & Health Guides You Can Use","Practical, jargon-free guides on mortgages, loans, saving, investing and health, updated regularly.","blog.html")+NAV
+    body+='<div class="page-head"><div class="wrap"><div class="eyebrow">The Fynzo Blog</div><h1>Money &amp; health, made simple.</h1><p class="updated">Practical guides - no jargon, just the numbers that matter. New posts every few days.</p></div></div>'
     body+='<div class="content">'
     if feat:
         body+='<div class="featured"><div><div class="post-cat">Featured &middot; '+feat[2]+'</div><h2>'+feat[3]+'</h2><p>'+feat[4]+'</p><a href="'+feat[0]+'" class="btn">Read the guide &rarr;</a></div><div class="featured-art" style="padding:0;overflow:hidden"><img src="'+feat[1]+'" alt="'+feat[3]+'" style="width:100%;height:100%;object-fit:cover;border-radius:18px"></div></div>'

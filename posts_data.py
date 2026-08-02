@@ -174,4 +174,28 @@ POSTS = [
   body="<h2>The quick conversion</h2><p>Annual salary ≈ hourly rate × hours per week × 52. So $25/hour at 40 hours ≈ $52,000 a year, before tax.</p><h2>What the simple math misses</h2><ul><li><strong>Unpaid time off</strong> — hourly work may not pay holidays or sick days.</li><li><strong>Overtime</strong> — can boost hourly income above the straight conversion.</li><li><strong>Benefits</strong> — salaried roles often add health cover and paid leave.</li></ul><div class='callout'><p>&#128161; Compare total value, not just the headline number — benefits and paid time off matter.</p></div><h2>Convert instantly</h2><p>Use the hourly-to-salary calculator, then run the result through the tax calculator for take-home pay.</p>",
   cta_href="hourly-to-salary-calculator.html", cta_label="Open the Hourly to Salary Calculator",
   related=[("hourly-to-salary-calculator.html","Hourly to Salary"),("income-tax-calculator.html","Income Tax Calculator"),("savings-goal-calculator.html","Savings Goal")]),
+
+  dict(slug="how-to-use-mortgage-calculator", date="2026-08-02", cat="Mortgages", img="og-mortgage.svg",
+  title="How to use a mortgage calculator to save thousands (2026)",
+  meta="Learn practical ways to use a mortgage calculator to compare loan terms, evaluate extra payments, and plan refinances so you pay less interest over time.",
+  lead="A mortgage calculator is one of the simplest yet most powerful tools for anyone buying a home or managing an existing mortgage.",
+  body="<h2>What a mortgage calculator shows</h2><p>It shows monthly payment, interest vs principal split and an amortization schedule. It does not always include taxes, insurance or closing costs — add those separately for a full picture.</p><h2>Compare terms</h2><p>Run 15- and 30-year scenarios and compare monthly payments and total interest. Shorter terms save interest but raise payments.</p><h2>Test extra payments</h2><p>Enter an extra monthly amount or a one-off lump sum to see how much time and interest you save.</p><h2>Use it for refinancing</h2><p>Compare your current loan to a hypothetical refinance and compute break-even months (closing costs ÷ monthly savings).</p>",
+  cta_href="mortgage-calculator.html", cta_label="Open the Mortgage Calculator",
+  related=[("mortgage-calculator.html","Mortgage Calculator"),("mortgage-affordability-calculator.html","Affordability Calculator"),("refinance-breakeven-calculator.html","Refinance Break-even")]),
+
+  dict(slug="mortgage-affordability-calculator", date="2026-08-02", cat="Mortgages", img="og-mortgage.svg",
+  title="Mortgage affordability calculator — how much house can I afford? (2026)",
+  meta="Use our mortgage affordability calculator to find the maximum house price you can afford based on income, debts, and down payment.",
+  lead="Before house hunting, it helps to know what you can realistically afford. This calculator estimates a recommended maximum purchase price.",
+  body="<h2>Key inputs</h2><p>Gross monthly income, recurring monthly debts, expected down payment, interest rate and loan term. Optional: property tax and insurance.</p><h2>How we estimate affordability</h2><p>We compute common lender ratios (front-end and back-end) to return a practical maximum price and expected monthly payment.</p><h2>Practical tips</h2><p>Increase down payment, reduce debts, or improve your credit to increase affordability. Always add a buffer for closing costs.</p>",
+  cta_href="mortgage-affordability-calculator.html", cta_label="Calculate affordability",
+  related=[("mortgage-calculator.html","Mortgage Calculator"),("blog-how-much-house-can-i-afford.html","How much house can I afford"),("savings-goal-calculator.html","Savings Goal")]),
+
+  dict(slug="debt-repayment-snowball-avalanche", date="2026-08-02", cat="Debt", img="og-loan.svg",
+  title="Debt repayment: snowball vs avalanche — which repays debt faster? (2026)",
+  meta="Compare the debt snowball and avalanche methods and use our debt payoff calculator to see which pays off your debts faster and saves more in interest.",
+  lead="When tackling multiple debts, choosing the repayment method affects speed and interest. Compare snowball and avalanche with examples.",
+  body="<h2>Snowball</h2><p>Pay minimums on all debts and target the smallest balance first — quick wins keep motivation high.</p><h2>Avalanche</h2><p>Target the highest-interest debt first to minimise total interest paid — best for pure savings.</p><h2>Which to choose</h2><p>Use avalanche to save the most money; choose snowball if you need momentum. Try both in our payoff calculator.</p>",
+  cta_href="loan-calculator.html", cta_label="Open the Loan Calculator",
+  related=[("loan-calculator.html","Loan Calculator"),("blog-pay-off-loan-faster.html","Pay off a loan faster"),("savings-goal-calculator.html","Savings Goal")]),
 ]

@@ -1,16 +1,69 @@
 #!/usr/bin/env python3
 from pathlib import Path
 from html import escape
-ROOT=Path(__file__).resolve().parent
-DOMAIN='https://fynzo.me/'
+import json
 
-def page(slug,title,desc,h1,eyebrow,fields,result_js,content,faq,related):
-    field_html=''.join(fields)
-    faq_html=''.join(f'<div class="faq-item"><div class="faq-q"><h3>{escape(q)}</h3><span>+</span></div><div class="faq-a">{escape(a)}</div></div>' for q,a in faq)
-    related_html=''.join(f'<a class="silo-card" href="{u}"><span>{escape(t)}</span></a>' for u,t in related)
-    html=f'''<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} | Fynzo</title><meta name="description" content="{escape(desc)}"><meta name="robots" content="index, follow, max-image-preview:large"><link rel="canonical" href="{DOMAIN}{slug}"><link rel="icon" href="favicon.svg"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0b1020"><meta property="og:type" content="website"><meta property="og:site_name" content="Fynzo"><meta property="og:title" content="{escape(title)} | Fynzo"><meta property="og:description" content="{escape(desc)}"><meta property="og:url" content="{DOMAIN}{slug}"><meta property="og:image" content="{DOMAIN}og-default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)} | Fynzo"><meta name="twitter:description" content="{escape(desc)}"><meta name="twitter:image" content="{DOMAIN}og-default.png"><link rel="stylesheet" href="styles.css"></head><body><a class="skip-link" href="#main-content">Skip to main content</a><header class="site-header"><nav aria-label="Primary navigation"><a class="brand" href="index.html" aria-label="Fynzo home">Fynzo</a><div class="nav-links"><a href="index.html#tools">Calculators</a><a href="blog.html">Guides</a><a href="about.html">About</a></div></nav></header><nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> · <a href="index.html#finance-calculators">Calculators</a> · {escape(h1)}</nav><main id="main-content"><div class="page-head"><div class="wrap"><div class="eyebrow">{escape(eyebrow)}</div><h1>{escape(h1)}</h1><p class="updated">{escape(desc)}</p></div></div><section class="sec"><div class="wrap"><div class="calc-wrap"><form id="fx" aria-label="{escape(h1)}">{field_html}<p id="err" role="alert" class="calc-error" hidden></p></form><div id="res" role="status" aria-live="polite" aria-atomic="true"></div></div></div></section><section class="sec"><div class="wrap"><div class="doc">{content}</div></div></section><section class="sec"><div class="wrap"><h2>Frequently asked questions</h2><div class="faq">{faq_html}</div></div></section><section class="silo"><div class="wrap"><h2 class="silo-h">Related tools and guides</h2><div class="silo-grid">{related_html}</div></div></section></main><footer class="site-footer"><div class="wrap"><div class="foot-bottom">© 2026 Fynzo · Educational estimates only · Calculations run in your browser.</div></div></footer><script defer src="fynzo.js"></script><script>{result_js}</script><script defer src="advanced.js"></script><script defer src="tool-actions.js"></script></body></html>'''
-    (ROOT/slug).write_text(html,encoding='utf-8')
+ROOT = Path(__file__).resolve().parent
+DOMAIN = 'https://fynzo.me/'
+
+
+def ld(*objs):
+    return ''.join(
+        '<script type="application/ld+json">\n'
+        + json.dumps(obj, ensure_ascii=False, separators=(',', ':'))
+        + '\n</script>'
+        for obj in objs
+        if obj
+    )
+
+
+def page(slug, title, desc, h1, eyebrow, fields, result_js, content, faq, related):
+    field_html = ''.join(fields)
+    faq_html = ''.join(
+        f'<div class="faq-item"><div class="faq-q"><h3>{escape(q)}</h3><span>+</span></div><div class="faq-a">{escape(a)}</div></div>'
+        for q, a in faq
+    )
+    related_html = ''.join(f'<a class="silo-card" href="{u}"><span>{escape(t)}</span></a>' for u, t in related)
+    schema = ld(
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": h1,
+            "description": desc,
+            "url": DOMAIN + slug,
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
+            "isAccessibleForFree": True,
+            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+            "publisher": {
+                "@type": "Organization",
+                "name": "Fynzo",
+                "url": DOMAIN,
+                "logo": {"@type": "ImageObject", "url": DOMAIN + "logo-icon.svg"},
+            },
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": DOMAIN},
+                {"@type": "ListItem", "position": 2, "name": "Calculators", "item": DOMAIN + "index.html"},
+                {"@type": "ListItem", "position": 3, "name": h1, "item": DOMAIN + slug},
+            ],
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+                for q, a in faq
+            ],
+        },
+    )
+    html = f'''<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} | Fynzo</title><meta name="description" content="{escape(desc)}"><meta name="robots" content="index, follow, max-image-preview:large"><link rel="canonical" href="{DOMAIN}{slug}"><link rel="alternate" hreflang="en" href="{DOMAIN}{slug}"><link rel="alternate" hreflang="x-default" href="{DOMAIN}{slug}"><link rel="icon" href="favicon.svg"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0b1020"><meta property="og:type" content="website"><meta property="og:site_name" content="Fynzo"><meta property="og:title" content="{escape(title)} | Fynzo"><meta property="og:description" content="{escape(desc)}"><meta property="og:url" content="{DOMAIN}{slug}"><meta property="og:image" content="{DOMAIN}og-default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)} | Fynzo"><meta name="twitter:description" content="{escape(desc)}"><meta name="twitter:image" content="{DOMAIN}og-default.png"><meta name="twitter:image:alt" content="{escape(title)}"><link rel="stylesheet" href="styles.css">{schema}</head><body><a class="skip-link" href="#main-content">Skip to main content</a><header class="site-header"><nav aria-label="Primary navigation"><a class="brand" href="index.html" aria-label="Fynzo home">Fynzo</a><div class="nav-links"><a href="index.html#tools">Calculators</a><a href="blog.html">Guides</a><a href="about.html">About</a></div></nav></header><nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> · <a href="index.html#finance-calculators">Calculators</a> · {escape(h1)}</nav><main id="main-content"><div class="page-head"><div class="wrap"><div class="eyebrow">{escape(eyebrow)}</div><h1>{escape(h1)}</h1><p class="updated">{escape(desc)}</p></div></div><section class="sec"><div class="wrap"><div class="calc-wrap"><form id="fx" aria-label="{escape(h1)}">{field_html}<p id="err" role="alert" class="calc-error" hidden></p></form><div id="res" role="status" aria-live="polite" aria-atomic="true"></div></div></div></section><section class="sec"><div class="wrap"><div class="doc">{content}</div></div></section><section class="sec"><div class="wrap"><h2>Frequently asked questions</h2><div class="faq">{faq_html}</div></div></section><section class="silo"><div class="wrap"><h2 class="silo-h">Related tools and guides</h2><div class="silo-grid">{related_html}</div></div></section></main><footer class="site-footer"><div class="wrap"><div class="foot-bottom">© 2026 Fynzo · Educational estimates only · Calculations run in your browser.</div></div></footer><script defer src="fynzo.js"></script><script>{result_js}</script><script defer src="advanced.js"></script><script defer src="tool-actions.js"></script></body></html>'''
+    (ROOT / slug).write_text(html, encoding='utf-8')
 
 field=lambda label,id,value,typ='number',step='any',extra='': f'<div class="field"><label for="{id}">{label}</label><input id="{id}" data-k="{id}" type="{typ}" value="{value}" step="{step}" {extra}></div>'
 
